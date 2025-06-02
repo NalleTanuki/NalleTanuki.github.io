@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="ae900b80-bda0-474c-a901-e1ce8cc58766" activeEnvironment="Default" name="InsertCategoria" resourceRoot="" soapui-version="5.8.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="6ca0f962-af79-418b-90e6-e68049083573" wsaVersion="NONE" name="InsertCategoriaBinding" type="wsdl" bindingName="{InsertCategoriaSOAP}InsertCategoriaBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost/dwes/SOAP_Service/InsertCategoria.php?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost/dwes/SOAP_Service/InsertCategoria.php?wsdl"><con:part><con:url>http://localhost/dwes/SOAP_Service/InsertCategoria.php?wsdl</con:url><con:content><![CDATA[<definitions targetNamespace="InsertCategoriaSOAP" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="InsertCategoriaSOAP" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema targetNamespace="InsertCategoriaSOAP">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/"/>
+      <xsd:complexType name="InsertCategoria">
+        <xsd:all>
+          <xsd:element name="usu_nom" type="xsd:string"/>
+          <xsd:element name="usu_ape" type="xsd:string"/>
+          <xsd:element name="usu_correo" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="response">
+        <xsd:all>
+          <xsd:element name="Resultado" type="xsd:boolean"/>
+        </xsd:all>
+      </xsd:complexType>
+    </xsd:schema>
+  </types>
+  <message name="InsertCategoriaServiceRequest">
+    <part name="InsertCategoria" type="tns:InsertCategoria"/>
+  </message>
+  <message name="InsertCategoriaServiceResponse">
+    <part name="InsertCategoria" type="tns:response"/>
+  </message>
+  <portType name="InsertCategoriaPortType">
+    <operation name="InsertCategoriaService">
+      <documentation>Inserta una categorÃ­a</documentation>
+      <input message="tns:InsertCategoriaServiceRequest"/>
+      <output message="tns:InsertCategoriaServiceResponse"/>
+    </operation>
+  </portType>
+  <binding name="InsertCategoriaBinding" type="tns:InsertCategoriaPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="InsertCategoriaService">
+      <soap:operation soapAction="http://localhost/dwes/SOAP_Service/InsertCategoria.php/InsertCategoriaService" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="InsertCategoriaSOAP" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="InsertCategoriaSOAP" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="InsertCategoria">
+    <port name="InsertCategoriaPort" binding="tns:InsertCategoriaBinding">
+      <soap:address location="http://localhost/dwes/SOAP_Service/InsertCategoria.php"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost/dwes/SOAP_Service/InsertCategoria.php</con:endpoint></con:endpoints><con:operation id="cae2bc9f-a73d-4e75-9728-e2b30525a270" isOneWay="false" action="http://localhost/dwes/SOAP_Service/InsertCategoria.php/InsertCategoriaService" name="InsertCategoriaService" bindingOperationName="InsertCategoriaService" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ab34f4f6-951f-4963-a626-d138de13f31d" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost/dwes/SOAP_Service/InsertCategoria.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ins="InsertCategoriaSOAP">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ins:InsertCategoriaService soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">\r
+         <InsertCategoria xsi:type="ins:InsertCategoria">\r
+            <!--You may enter the following 3 items in any order-->\r
+            <usu_nom xsi:type="xsd:string">SOAPUIx</usu_nom>\r
+            <usu_ape xsi:type="xsd:string">SOAPUIx API</usu_ape>\r
+            <usu_correo xsi:type="xsd:string">correox@ui.com</usu_correo>\r
+         </InsertCategoria>\r
+      </ins:InsertCategoriaService>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://localhost/dwes/SOAP_Service/InsertCategoria.php/InsertCategoriaService"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

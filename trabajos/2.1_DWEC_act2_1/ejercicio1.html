@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 2 - Ejercicio 1</title>
+    <link rel="stylesheet" href="ejercicio1.css">
+
+    <!-- Crea una aplicación web en HTML y JavaScript que permita
+     calcular el precio final de un producto después de aplicar un descuento.
+     
+     La aplicación debe permitir que el usuario introduzca el precio original del producto y
+     el porcentaje de descuento a aplicar.
+     
+     Al hacer clic en el botón "Calcular", la aplicación mostrará el precio final del producto, ajustado a dos decimales -->
+</head>
+
+<body>
+    <div id="contenedor">
+        <!-- Titulo -->
+        <h1>Calculadora de Precio con Descuento</h1>
+
+        <!-- PRECIO -->
+        <p class="texto">Precio Original (€):</p>
+        <input type="number" id="precio" placeholder="Intoduce el precio">
+
+        <!-- DESCUENTO -->
+        <p class="texto">Descuento (%):</p>
+        <input type="number" id="descuento" placeholder="Introduce el descuento">
+
+        <!-- BOTON Calcular -->
+        <button onclick="calcularPrecioFinal()">Calcular Precio Final</button>
+
+        <!-- Mensaje que se mostrara con el resultado -->
+        <p id="mensaje"></p>
+    </div>
+
+    <script src="ejercicio1.js"></script>
+</body>
+
+</html>

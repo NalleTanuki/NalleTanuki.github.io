@@ -1,0 +1,122 @@
+/* CUERPO */
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    background: linear-gradient(to right, #f0f4f8, #d9e2ec);
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+}
+
+/* TITULO - h1 */
+h1{
+    text-align: center;
+
+    color: #333;
+
+    margin-bottom: 1.5rem;
+
+    font-size: 1.8rem;
+}
+
+/* ETIQUETAS */
+label{
+    display: block;
+
+    margin-bottom: 0.5rem;
+
+    color: #555;
+
+    font-weight: 500;
+}
+
+/* SELECTS */
+select{
+    width: 100%;
+
+    padding: 0.6rem;
+    margin-bottom: 1.5rem;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    font-size: 1rem;
+
+    background-color: #f9f9f9;
+
+    transition: border 0.3s;
+}
+
+select:focus{
+    border-color: #007acc;
+
+    outline: none;
+
+    background-color: #fff;
+}
+
+/* BOTON */
+button{
+    width: 100%;
+    padding: 0.7rem;
+
+    background-color: #007acc;
+    
+    color: whitesmoke;
+    font-size: 1rem;
+    font-weight: bold;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s;
+}
+
+button:hover{
+    background-color: #005fa3;
+}
+
+/* ================================ EJERCICIO 2 ================================ */
+/* CONTRASENHA / PASSWORD */
+input[type="password"]{
+    width: 100%;
+
+    padding: 0.6rem;
+    margin-bottom: 0.5rem;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    font-size: 1rem;
+
+    background-color: #f9f9f9;
+
+    transition: border 0.3s;
+}
+
+input[type="password"]:focus{
+    border-color: #007acc;
+
+    outline: none;
+
+    background-color: #fff;
+}
+
+/* MENSAJE ERROR */
+.mensaje-error{
+    color: red;
+    font-size: 0.9rem;
+
+    margin-bottom: 1rem;
+
+    display: block;
+}

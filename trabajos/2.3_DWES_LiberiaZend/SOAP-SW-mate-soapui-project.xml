@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="898b494c-d9dc-42b3-83ba-8af6d33622e7" activeEnvironment="Default" name="SOAP_SW_mate" resourceRoot="" soapui-version="5.8.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="74cb7335-c7f4-4fae-9a2f-2a2672efbc3d" wsaVersion="NONE" name="MateBinding" type="wsdl" bindingName="{http://localhost/dwes/cap10/servidorsoapmate.php}MateBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost/dwes/cap10/servidorsoapmate.php?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost/dwes/cap10/servidorsoapmate.php?wsdl"><con:part><con:url>http://localhost/dwes/cap10/servidorsoapmate.php?wsdl</con:url><con:content><![CDATA[<definitions name="Mate" targetNamespace="http://localhost/dwes/cap10/servidorsoapmate.php" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://localhost/dwes/cap10/servidorsoapmate.php" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/">
+  <types>
+    <xsd:schema targetNamespace="http://localhost/dwes/cap10/servidorsoapmate.php">
+      <xsd:element name="potencia">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="base" type="xsd:float"/>
+            <xsd:element name="exponente" type="xsd:float"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="potenciaResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="potenciaResult" type="xsd:float"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </types>
+  <portType name="MatePort">
+    <operation name="potencia">
+      <documentation>potencia</documentation>
+      <input message="tns:potenciaIn"/>
+      <output message="tns:potenciaOut"/>
+    </operation>
+  </portType>
+  <binding name="MateBinding" type="tns:MatePort">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="potencia">
+      <soap:operation soapAction="http://localhost/dwes/cap10/servidorsoapmate.php#potencia"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="MateService">
+    <port name="MatePort" binding="tns:MateBinding">
+      <soap:address location="http://localhost/dwes/cap10/servidorsoapmate.php"/>
+    </port>
+  </service>
+  <message name="potenciaIn">
+    <part name="parameters" element="tns:potencia"/>
+  </message>
+  <message name="potenciaOut">
+    <part name="parameters" element="tns:potenciaResponse"/>
+  </message>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost/dwes/cap10/servidorsoapmate.php</con:endpoint></con:endpoints><con:operation id="db865ff1-49a8-4186-93ae-6965e0f4f6e2" isOneWay="false" action="http://localhost/dwes/cap10/servidorsoapmate.php#potencia" name="potencia" bindingOperationName="potencia" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="dc7b2f2b-ea27-4bd3-9f15-27e30b726a8a" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost/dwes/cap10/servidorsoapmate.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://localhost/dwes/cap10/servidorsoapmate.php">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:potencia>\r
+         <base>5</base>\r
+         <exponente>3</exponente>\r
+      </ser:potencia>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://localhost/dwes/cap10/servidorsoapmate.php#potencia"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

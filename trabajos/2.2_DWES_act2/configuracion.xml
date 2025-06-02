@@ -1,0 +1,8 @@
+<!-- Para almacenar los datos de configuracion de la BD -->
+<?xml version="1.0" encoding="UTF-8"?>
+<configuracion>
+    <ip>127.0.0.1</ip>
+    <nombre>pedidos</nombre> <!-- Nombre de la BD -->
+    <usuario>root</usuario>
+    <clave></clave>
+</configuracion>

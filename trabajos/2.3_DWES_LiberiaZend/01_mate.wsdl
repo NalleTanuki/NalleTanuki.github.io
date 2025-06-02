@@ -1,0 +1,58 @@
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://localhost/cap10/matewsdl.php"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema/"
+    xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+    xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+    name="Mate" targetNamespace="http://localhost/cap10/matewsdl.php">
+    <types>
+        <xsd:schema targetNamespace="http://localhost/cap10/matewsdl.php">
+            <xsd:element name="potencia">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="base" type="xsd:float"/>
+                        <xsd:element name="exponente" type="xsd:float"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="potenciaResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="potenciaResult" type="xsd:float"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:schema>
+    </types>
+    <portType name="MatePort">
+        <operation name="potencia">
+            <documentation>/**
+            </documentation>
+            <input message="tns:potenciaIn"/>
+            <input message="tns:potenciaOut"/>
+        </operation>
+    </portType>
+    <binding name="MateBinding" type="tns:MatePort">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="potencia">
+            <soap:operation soapAction="http://localhost/cap10/matewsdl.php#potencia"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+    </binding>
+    <service name="MateService">
+        <port name="MatePort" binding="tns:MateBinding">
+            <soap:address location="http://localhost/cap10/matewsdl.php"/>
+        </port>
+    </service>
+    <message name="potenciaIn">
+        <part name="parameters" element="tns:potencia"/>
+    </message>
+    <message name="potenciaOut">
+        <part name="parameters" element="tns:potencia"/>
+    </message>
+</definitions>

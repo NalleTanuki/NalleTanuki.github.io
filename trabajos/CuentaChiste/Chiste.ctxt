@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Chiste
+comment1.params=contenido
+comment1.target=Chiste(java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getContenido()
+comment3.params=
+comment3.target=boolean\ isLeido()
+comment4.params=leido
+comment4.target=void\ setLeido(boolean)
+comment5.params=
+comment5.target=void\ print()
+numComments=6

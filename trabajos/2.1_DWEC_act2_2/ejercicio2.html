@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 2 - Ejercicio 2</title>
+    <link rel="stylesheet" href="ejercicio2.css">
+
+    <!-- Crea una aplicación en JavaScript que permita al usuario:
+      - ingresar varios números
+      - almacenarlos en un array
+      - realizar algunas operaciones sobre los números ingresados.
+      
+      Debes usar un bucle for para recorrer el array y calcular:
+      - valor máximo
+      - valor mínimo
+      - promedio de los números. -->
+</head>
+
+<body>
+    <div id="contenedor">
+        <!-- TITULO -->
+        <h1>Operaciones con Arrays</h1>
+
+        <!-- Campo ingresar numero -->
+        <p>Ingrese un número:</p>
+        <input type="number" id="numero" placeholder="Ingrese un número">
+
+        <!-- BOTON agregar-->
+        <button id="botonAgregar" onclick="agregarNumero()">Agregar</button>
+
+        <!-- LISTA numeros agregados -->
+        <p><b>Lista de números: </b><span id="numerosAgregados"></span></p>
+
+        <!-- OPERACIONES -->
+        <p><b>Operaciones:</b></p>
+        <ul>
+            <li><b>Número más grande:</b> <span id="masGrande"></span></li>
+            <li><b>Número más pequeño:</b> <span id="masPeque"></span></li>
+            <li><b>Promedio:</b> <span id="promedio"></span></li>
+        </ul>
+
+        <!-- BOTON calcular -->
+        <button onclick="realizarOperaciones()">Realizar operaciones</button>
+    </div>
+
+    <script src="ejercicio2.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+/* CUERPO */
+body
+{
+    font-family: "Segoe UI", sans-serif;
+
+    background-color: #f9f9f9;
+
+    margin: 0;
+    padding: 20px;
+}
+
+/* TITULO H1 */
+h1
+{
+    text-align: center;
+
+    color: #333;
+}
+
+/* NOTICIA */
+.noticia
+{
+    background-color: #fff;
+
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    margin-bottom: 20px;
+    padding: 20px;
+
+    transition: transform 0.2s ease;
+}
+
+.noticia:hover
+{
+    transform: scale(1.01);
+}
+
+/* TITULO */
+.titulo
+{
+    font-size: 1.2em;
+
+    color: #0056b3;
+
+    margin-bottom: 10px;
+}
+
+/* FECHA */
+.fecha
+{
+    font-size: 0.9em;
+
+    color: #888;
+
+    margin-bottom: 10px;
+}
+
+/* ENLACE */
+.enlace{
+    color: #007bff;
+    text-decoration: none;
+}
+
+.enlace:hover
+{
+    text-decoration: underline;
+}

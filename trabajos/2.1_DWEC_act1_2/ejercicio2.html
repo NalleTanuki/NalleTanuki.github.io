@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 2.	Elabora una web que muestra tres botones con 3 nombres de película.
+    Cuando el usuario seleccione una película, debe de mostrar:
+        ●	El título de la película.
+        ●	Una breve descripción de la trama (deberás escribir una para cada película).
+        ●	Una imagen relacionada con la película.
+        ●	Una alerta emergente que diga el nombre de la película seleccionada.
+ -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+
+    <link rel="stylesheet" href="ejercicio2.css">
+</head>
+<body>
+    <h1>Selecciona una película</h1>
+
+    <!-- Botones -->
+    <button onclick="mostrarInfo('halloween')">Halloween</button>
+    <button onclick="mostrarInfo('senorAnillos')">El señor de los anillos</button>
+    <button onclick="mostrarInfo('alienPredator')">Alien vs. Predator</button>
+
+    <!-- Contenedor para la info a mostrar -->
+    <div id="infoPelicula"></div>
+
+    <script src="ejercicio2.js"></script>
+</body>
+</html>

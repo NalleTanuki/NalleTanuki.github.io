@@ -1,0 +1,32 @@
+[
+    {
+        "value": "electronica",
+        "label": "Electrónica",
+        "options": [
+            {"value": "telefonos", "label": "Teléfonos"},
+            {"value": "laptops", "label": "Laptops"},
+            {"value": "tv_audio", "label": "TV y Audio"},
+            {"value": "accesorios", "label": "Accesorios"}
+        ]
+    },
+    {
+        "value": "ropa",
+        "label": "Ropa",
+        "options": [
+            {"value": "camisas", "label": "Camisas"},
+            {"value": "pantalones", "label": "Pantalones"},
+            {"value": "vestidos", "label": "Vestidos"},
+            {"value": "zapatos", "label": "Zapatos"}
+        ]
+    },
+    {
+        "value": "libros",
+        "label": "Libros",
+        "options": [
+            {"value": "ficcion", "label": "Ficción"},
+            {"value": "no_ficcion", "label": "No Ficción"},
+            {"value": "ciencia_ficcion", "label": "Ciencia Ficción"},
+            {"value": "autoayuda", "label": "Autoayuda"}
+        ]
+    }
+]

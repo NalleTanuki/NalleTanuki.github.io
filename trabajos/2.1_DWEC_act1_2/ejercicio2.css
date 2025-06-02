@@ -1,0 +1,33 @@
+body{
+    background-color: whitesmoke;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    align-items: center;
+    margin: 0;
+}
+
+h1{
+    padding: 20px 0px;
+}
+
+button{
+    background-color: rgb(207, 13, 68);
+    color: whitesmoke;
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0px 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(246, 95, 178);
+}
+
+#infoPelicula{
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 20px;
+}

@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=BancoChistes
+comment1.params=
+comment1.target=BancoChistes()
+comment2.params=
+comment2.target=void\ inicializar()
+comment3.params=
+comment3.target=boolean\ hayAlgunChisteSinLeer()
+comment4.params=minimo\ maximo
+comment4.target=int\ aleatorio(int,\ int)
+comment5.params=
+comment5.target=Chiste\ obtenerChisteAleatorio()
+comment5.text=\ \ Devuelve\ un\ chiste\ no\ le\u00EDdo\ al\ azar\ \n\ \ \ \ \ \ \ \ \ PRE\:\ Debe\ existir\ por\ lo\ menos\ un\ chiste\ sin\ leer\n\ \ \ \ \ \ \ \ \ @return\ el\ chiste\ encontrado\ \n
+comment6.params=contenido
+comment6.target=boolean\ agregarChiste(java.lang.String)
+comment6.text=\ Intenta\ a\u00F1adir\ un\ chiste\ en\ el\ banco\ de\ chistes.\ Devuelve\ true\ si\ lo\ consigue,\ o\ false\ si\ no\ queda\ espacio\ libre\n\ @return\ true\ si\ puede\ a\u00F1adir\ el\ nuevo\ chiste,\ false\ en\ caso\ contrario\ (no\ queda\ espacio\ libre)\n
+comment7.params=posicion
+comment7.target=void\ borrarChiste(int)
+comment8.params=
+comment8.target=boolean\ printChisteAleatorio()
+comment8.text=Mejorable,\ este\ m\u00E9todo\ deber\u00EDa\ estar\ en\ la\ clase\ principal\ del\ proyecto
+numComments=9

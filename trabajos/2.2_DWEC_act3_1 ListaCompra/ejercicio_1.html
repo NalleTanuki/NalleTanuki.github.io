@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Lista de productos y botones para interactuar con la lista -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 01</title>
+
+    <link rel="stylesheet" href="ejercicio_1.css">
+</head>
+<body>
+    <!-- TITULO -->
+    <h1>Lista de la Compra</h1>
+
+    <!-- DIV -->
+    <div>
+        <!-- CAMPO DE ENTRADA -->
+        <input type="text" id="producto" placeholder="Introduce un producto...">
+        
+        <!-- BOTONES -->
+        <button onclick="anhadir()">Añadir</button> <!-- ANHADIR -->
+        <button onclick="eliminar()">Eliminar</button> <!-- ELIMINAR -->
+        <button onclick="cambiarColor()">Cambiar color del texto</button> <!-- CAMBIAR COLOR -->
+        <button onclick="resetear()">Resetear</button> <!-- RESETEAR -->
+    </div>
+
+    <!-- Lista de los Productos -->
+    <ul id="listaProductos"></ul>
+
+    <script src="ejercicio_1.js"></script>
+</body>
+</html>

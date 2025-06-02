@@ -1,0 +1,59 @@
+body{
+    display: flex;
+    background-color: rgb(230, 231, 232);
+    margin: 0px;
+    padding: 10px;
+    width: 100%;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    justify-content: center;
+}
+
+#contenedor{
+    background-color: white;
+    width: 30%;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+p{
+    margin-bottom: 5px;
+}
+
+#numero{
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    width: 90%;
+    height: 15px;
+    padding: 10px;
+}
+
+button{
+    height: 40px;
+    width: 40%;
+    color: whitesmoke;
+    background-color: rgb(63, 172, 63);
+    margin: 15px;
+    border: none;
+    border-radius: 6px;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: rgb(55, 157, 55);
+}
+
+#botonAgregar{
+    width: 20%;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+li{
+    margin-bottom: 10px;
+}

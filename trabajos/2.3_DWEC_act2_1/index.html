@@ -1,0 +1,62 @@
+<!-- 
+1) Desarrolla una página web que permita a los usuarios seleccionar opciones dinámicamente mediante dos elementos `<select>`.
+El primer `<select>` contendrá una lista de opciones principales (Electrónica, ropa, libros), mientras que
+el segundo se llenará dinámicamente según la selección realizada en el primero. El json os lo doy yo, está adjunto en la actividad (4,5pt)
+
+*Requisitos:*
+    a) Debes usar AJAX
+    b) Implementa un formulario HTML que contenga dos elementos `<select>` 
+    c) Implementa la funcionalidad para que al seleccionar una opción del primer `<select>`, se carguen dinámicamente las opciones relacionadas en el segundo `<select>`.
+    d) Cuando el usuario envíe el formulario, muestra una alerta con la opción seleccionada en el segundo `<select>` 
+
+2) Añade al ejercicio anterior un campo de contraseña que debe cumplir con que dicha contraseña debe contener:
+    - al menos 8 caracteres,
+    - una mayúscula,
+    - una minúscula
+    - y un número
+Estos requisitos de formato deben definirse por una expresión regular.
+El formulario mostrará mensajes de error si la contraseña no cumple con los requisitos al enviar el formulario.  (2pt) 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con AJAX</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div class="container">
+        <!-- TITULO -->
+        <h1>Formulario de Categorías</h1>
+
+        <!-- FORMULARIO -->
+        <form id="formulario">
+            <!-- Categorias -->
+            <label for="categoriaSelect">Categoría:</label>
+            <select id="categoriaSelect" required>
+                <option value="">Seleccione una categoría</option>
+            </select>
+
+            <!-- Subcategorias -->
+            <label for="subcategoriaSelect">Subcategoría:</label>
+            <select id="subcategoriaSelect" required>
+                <option value="">Seleccione una subcategoría</option>
+            </select>
+
+            <!-- CONTRASENHA ---------------- EJERCICIO 2 -->
+             <label for="password">Contraseña:</label>
+             <input type="password" id="password" placeholder="Introduce tu contraseña" required>
+             <small id="errorPassword" class="mensaje-error"></small>
+
+            <!-- BOTON -->
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <!-- JS -->
+     <script src="js/script.js"></script>
+</body>
+</html>
