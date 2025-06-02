@@ -1,36 +1,53 @@
-body{
-    font-family: Arial, sans-serif;
-    background: #f8f9fa;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f0f4f8, #e9eef2);
     margin: 0;
     padding: 2rem;
     text-align: center;
+    color: #333;
 }
-    
+
+/* Titulo principal */
 h1 {
-    color: #343a40;
-
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
+/* Contenedor en grid adaptable */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin-top: 2.5rem;
+    padding: 0 1rem;
 }
+
+/* Tarjeta individual con efecto visual sutil */
 .card {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
+    background: #ffffff;
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: scale(1.02);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
 }
 
+/* Enlaces estilizados */
 a {
     text-decoration: none;
-    color: #007bff;
-    font-weight: bold;
+    color: #0066cc;
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #004999;
 }
