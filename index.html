@@ -1,71 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alexandra | Portfolio Creativo</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alexandra | Portfolio</title>
   <link rel="stylesheet" href="css/estilos.css">
-</head>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+</head>
 <body>
-  <header>
-    <h1>Alexandra Valledor</h1>
-    <p>Desarrolladora Web & Diseñadora Gráfica</p>
+  <header class="header">
+    <div class="container">
+      <h1><span class="resaltado">Alexandra Valledor</span> <br>Programadora & Diseñadora Gráfica</h1>
+      <p class="descripcion">Creatividad y código, en perfecta armonía.</p>
+      <nav>
+        <a href="#proyectos">Proyectos</a>
+        <a href="https://github.com/NalleTanuki" target="_blank">GitHub</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
   </header>
 
-  <section class="about">
-    <p>¡Hola! Soy Alexandra, una apasionada de la programación y el diseño visual. Me encanta transformar ideas en experiencias digitales funcionales y estéticas. Aquí encontrarás una selección de mis proyectos desarrollados en el ámbito del diseño y desarrollo web.</p>
+  <section id="proyectos" class="proyectos">
+    <h2>Proyectos destacados</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>🛒 Tienda Online (DWES)</h3>
+        <p>Carrito, login y conexión a BD con PHP.</p>
+        <a href="https://github.com/NalleTanuki/NalleTanuki.github.io/tree/main/trabajos/2.2_DWES_act2" target="_blank">Ver proyecto</a>
+      </div>
+      <div class="card">
+        <h3>📇 Agenda de Contactos (DWES)</h3>
+        <p>App con autenticación y gestión de contactos.</p>
+        <a href="https://github.com/NalleTanuki/NalleTanuki.github.io/tree/main/trabajos/2.2_DWES_act1" target="_blank">Ver proyecto</a>
+      </div>
+      <div class="card">
+        <h3>🔗 SOAP Service (DWES)</h3>
+        <p>Servicio web SOAP con NuSOAP y XML estructurado.</p>
+        <a href="https://github.com/NalleTanuki/NalleTanuki.github.io/tree/main/trabajos/2.3_DWES_SOAP.Service" target="_blank">Ver proyecto</a>
+      </div>
+      <div class="card">
+        <h3>💄 Web ZARA (Lenguaje de Marcas)</h3>
+        <p>Diseño estático con HTML y CSS.</p>
+        <a href="trabajos/1.1_LM_ZARA/html/index.html" target="_blank">Ver proyecto</a>
+      </div>
+      <div class="card">
+        <h3>🎬 Películas (DWEC)</h3>
+        <p>JavaScript + DOM para mostrar películas dinámicamente.</p>
+        <a href="trabajos/2.1_DWEC_act1_2/ejercicio2.html" target="_blank">Ver proyecto</a>
+      </div>
+      <div class="card">
+        <h3>👥 Empleados (DWES)</h3>
+        <p>Formulario con validación y MySQL.</p>
+        <a href="https://github.com/NalleTanuki/NalleTanuki.github.io/tree/main/trabajos/2.1_DWES_act2" target="_blank">Ver proyecto</a>
+      </div>
+    </div>
   </section>
 
-  <section class="grid">
-    <div class="card">
-      <h3>Tienda Online</h3>
-      <p>Proyecto de ecommerce con autenticación, carrito de compras y gestión de productos en PHP y MySQL.</p>
-      <p><a href="https://github.com/NalleTanuki/NalleTanuki.github.io/tree/main/trabajos/2.2_DWES_act2" target="_blank">Ver proyecto</a></p>
-    </div>
-
-    <div class="card">
-      <h3>Agenda de Contactos</h3>
-      <p>Aplicación PHP con gestión de usuarios, CRUD y persistencia de datos en base de datos MySQL.</p>
-      <p><a href="https://github.com/NalleTanuki/NalleTanuki.github.io/tree/main/trabajos/2.2_DWES_act1" target="_blank">Ver proyecto</a></p>
-    </div>
-
-    <div class="card">
-      <h3>Servicio SOAP</h3>
-      <p>Web service con NuSOAP para consumo e integración de servicios en aplicaciones web.</p>
-      <p><a href="https://github.com/NalleTanuki/NalleTanuki.github.io/tree/main/trabajos/2.3_DWES_SOAP.Service" target="_blank">Ver proyecto</a></p>
-    </div>
-
-    <div class="card">
-      <h3>Rediseño Web ZARA</h3>
-      <p>Clon estático de la web de ZARA utilizando HTML y CSS con foco en maquetación.</p>
-      <p><a href="trabajos/1.1_LM_ZARA/html/index.html" target="_blank">Ver proyecto</a></p>
-    </div>
-
-    <div class="card">
-      <h3>Aplicación de Películas</h3>
-      <p>Proyecto en JavaScript para listar películas e interactuar dinámicamente con el DOM.</p>
-      <p><a href="trabajos/2.1_DWEC_act1_2/ejercicio2.html" target="_blank">Ver proyecto</a></p>
-    </div>
-
-    <div class="card">
-      <h3>Formulario de Empleados</h3>
-      <p>Ingreso y validación de empleados con PHP y almacenamiento en MySQL.</p>
-      <p><a href="https://github.com/NalleTanuki/NalleTanuki.github.io/tree/main/trabajos/2.1_DWES_act2" target="_blank">Ver proyecto</a></p>
-    </div>
-
-    <div class="card">
-      <h3>Visita mis otros trabajos</h3>
-      <p>Algunos proyectos no tienen vista web, pero puedes ver su código en GitHub.</p>
-      <p><a href="https://github.com/NalleTanuki" target="_blank">Ir a GitHub</a></p>
-    </div>
+  <section id="contacto" class="contacto">
+    <h2>¿Trabajamos junt@s?</h2>
+    <p>Puedes escribirme a <a href="mailto:alexandravalledor@gmail.com">alexandravalledor@gmail.com</a> o contactarme por <a href="https://github.com/NalleTanuki" target="_blank">GitHub</a>.</p>
   </section>
 
   <footer>
-    Diseñado y desarrollado por Alexandra &copy; 2025
+    <p>© 2025 Alexandra | Portfolio</p>
   </footer>
+
+  <canvas id="fondoAnimado" style="position: fixed; top: 0; left: 0; z-index: -1;"></canvas>
+  <script src="js/script.js"></script>
 </body>
 </html>
