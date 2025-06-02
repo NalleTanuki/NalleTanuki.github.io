@@ -1,53 +1,84 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #f0f4f8, #e9eef2);
+    font-family: 'Roboto Mono', monospace;
+    background: linear-gradient(120deg, #fcf6f5, #e7eff6);
     margin: 0;
-    padding: 2rem;
-    text-align: center;
+    padding: 0;
     color: #333;
 }
 
-/* Titulo principal */
-h1 {
-    color: #2c3e50;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+header {
+    background-color: #1f1f1f;
+    color: white;
+    padding: 3rem 1rem 2rem;
+    text-align: center;
 }
 
-/* Contenedor en grid adaptable */
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    color: #cfd8dc;
+}
+
+.about {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: center;
+}
+
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    margin-top: 2.5rem;
-    padding: 0 1rem;
+    padding: 2rem;
 }
 
-/* Tarjeta individual con efecto visual sutil */
 .card {
-    background: #ffffff;
-    padding: 2rem 1.5rem;
+    background: white;
+    padding: 2rem;
     border-radius: 16px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 16px 30px rgba(0,0,0,0.15);
 }
 
-/* Enlaces estilizados */
+.card h3 {
+    color: #1f1f1f;
+    font-size: 1.3rem;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
 a {
-    text-decoration: none;
     color: #0066cc;
-    font-weight: 600;
-    font-size: 1.1rem;
-    display: inline-block;
-    margin-top: 1rem;
+    text-decoration: none;
+    font-weight: bold;
     transition: color 0.2s;
 }
 
 a:hover {
-    color: #004999;
+color: #004499;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+    background: #f4f4f4;
+    color: #777;
 }
