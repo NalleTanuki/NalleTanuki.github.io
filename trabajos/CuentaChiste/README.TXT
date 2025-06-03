@@ -4,9 +4,12 @@ Tell the reader (someone who does not know anything about this project)
 all they need to know. The comments should usually include at least:
 ------------------------------------------------------------------------
 
-PROJECT TITLE:
+PROJECT TITLE: CuentaChiste
 PURPOSE OF PROJECT:
-VERSION or DATE:
+  - Contar chistes
+  - Anhadir chiste
+  - Eliminar chiste
+  - Mostrar todos los chistes
+VERSION or DATE: 2023
 HOW TO START THIS PROJECT:
-AUTHORS:
-USER INSTRUCTIONS:
+AUTHORS: Alexandra V.
