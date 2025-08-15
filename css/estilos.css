@@ -1,11 +1,8 @@
-:root {
-  --primario: #1c1c1e;
-  --secundario: #888b8d;
-  --blanco: #ffffff;
-  --gris: #94a3b8;
-  --fuente: 'Space Grotesk', sans-serif;
+html {
+  scroll-behavior: smooth;
 }
 
+/* ===== RESETEO ===== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,10 +10,11 @@
 }
 
 body {
-  font-family: var(--fuente);
-  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
-  color: var(--primario);
+  font-family: var(--fuente-principal);
+  background-color: var(--fondo);
+  color: var(--texto);
   line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
 }
 
 .container {
@@ -25,70 +23,232 @@ body {
   padding: 2rem;
 }
 
+/* ===== VARIABLES BASE ===== */
+:root {
+  /* Colores (modo oscuro) */
+  --fondo: #0a0a0a;
+  --texto: #e0e0e0;
+  --resaltado: #ff7dff;
+  --gris: #999;
+  --blanco: #ffffff;
+  --accent-color: #c77dff;
+  --bg-btn: #1a1a1a;
+  --text-color: #f5f5f5;
+
+  /* Tipos */
+  --fuente-principal: 'Space Grotesk', sans-serif;
+  --fuente-mono: 'Fira Code', monospace;
+}
+
+/* Variables para modo claro */
+body.modo-claro {
+  --fondo: #fdfdfd;
+  --texto: #1c1c1e;
+  --resaltado: var(--accent-color);
+  --gris: #666;
+  --bg-btn: #eee;
+  --text-color: #1c1c1e;
+}
+
+/* ===== BOTON MODO CLR/OSC ===== */
+.toggle-theme {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 2000;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.4), -2px -2px 6px rgba(255,255,255,0.05);
+  transition: all 0.3s ease;
+}
+
+.toggle-theme:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+}
+
+.toggle-theme:active {
+  animation: bounce 0.3s;
+}
+
+/* Palanca redonda */
+.toggle-theme .switch {
+  width: 50px;
+  height: 24px;
+  background: var(--gris);
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.4s ease;
+}
+
+.toggle-theme .switch::after {
+  content: '';
+  width: 22px;
+  height: 22px;
+  background: var(--blanco);
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: transform 0.4s ease, background 0.4s ease;
+}
+
+/* Estado modo claro */
+body.modo-claro .toggle-theme .switch {
+  background: var(--accent-color);
+}
+body.modo-claro .toggle-theme .switch::after {
+  transform: translateX(26px);
+  background: #ffd700;
+}
+
+/* Animacion iconos */
+.toggle-theme :is(.icon-sun, .icon-moon) {
+  font-size: 16px;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.icon-sun { opacity: 0.3; }
+body.modo-claro .icon-sun { opacity: 1; transform: rotate(15deg) scale(1.2); }
+
+.icon-moon { opacity: 1; }
+body.modo-claro .icon-moon { opacity: 0.3; transform: scale(0.8); }
+
+/* ===== BOTONES IDIOMA ===== */
+#idiomaContenedor {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  z-index: 2000;
+}
+
+.idioma-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.idioma-btn.active,
+.idioma-btn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.idioma-btn img {
+  width: 28px;
+  height: auto;
+  display: block;
+}
+
+/* ===== HEADER ===== */
 .header {
   text-align: center;
-  padding: 4rem 1rem 2rem;
-  background: rgba(28, 28, 30, 0.9);
-  color: var(--blanco);
+  padding: 3rem 1rem;
 }
 
 .header h1 {
-  font-size: 2.8rem;
-  margin-bottom: 0.5rem;
+  font-size: 2.4rem;
+  font-family: var(--fuente-mono);
 }
 
 .resaltado {
-  color: var(--secundario);
+  color: var(--resaltado);
 }
 
 .descripcion {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: var(--gris);
   margin-bottom: 2rem;
+  font-family: var(--fuente-mono);
+}
+
+/* ===== ABOUT ME ===== */
+.sobre-mi {
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.sobre-mi h2 {
+  color: var(--resaltado);
+  margin-bottom: 1rem;
+}
+
+/* ===== NAV MENU ===== */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
 }
 
 nav a {
-  margin: 0 1rem;
-  color: var(--secundario);
+  color: var(--resaltado);
   text-decoration: none;
-  font-weight: bold;
+  font-family: var(--fuente-mono);
+  position: relative;
 }
 
-nav a:hover {
-  text-decoration: underline;
+nav a::after {
+  content: "_";
+  position: absolute;
+  right: -10px;
+  animation: blink 1s steps(1) infinite;
+  opacity: 0;
 }
 
+nav a:hover::after {
+  opacity: 1;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* ===== PROYECTOS ===== */
 .proyectos {
   padding: 4rem 1rem;
-  background-color: rgba(241, 245, 249, 0.9);
   text-align: center;
 }
 
 .proyectos h2 {
-  font-size: 2.2rem;
+  font-size: 2rem;
   margin-bottom: 2rem;
-  color: var(--primario);
+  color: var(--resaltado);
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  padding: 0 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .card {
-  background: var(--blanco);
-  padding: 2rem;
+  background: #111;
+  padding: 2.5rem;
   border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-  text-align: left;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.);
+}
+
+body.modo-claro .card {
+  background: #fce4ec;
 }
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
 }
 
 .card h3 {
@@ -104,47 +264,154 @@ nav a:hover {
 .card a {
   display: inline-block;
   margin-top: 1rem;
-  text-decoration: none;
-  color: var(--secundario);
+  color: var(--resaltado);
   font-weight: 600;
-  transition: color 0.3s;
+  text-decoration: none;
 }
 
 .card a:hover {
-  color: #0ea5e9;
+  text-decoration: underline;
 }
 
+/* ===== CONTACTO ===== */
 .contacto {
-  background: rgba(226, 232, 240, 0.9);
   padding: 4rem 1rem;
   text-align: center;
 }
 
 .contacto h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  color: var(--resaltado);
 }
 
 .contacto a {
-  color: var(--primario);
-  font-weight: bold;
+  color: var(--resaltado);
   text-decoration: underline;
 }
 
+/* ===== FOOTER ===== */
 footer {
-  background: var(--primario);
-  color: var(--blanco);
+  background: #0d0d0d;
+  color: var(--gris);
   text-align: center;
   padding: 1rem;
+  font-size: 0.9rem;
 }
 
+body.modo-claro footer {
+  background: #ffe4ec;
+  color: #666;
+}
 
+/* ===== FONDO ANIMADO ===== */
 #fondoAnimado {
   position: fixed;
   top: 0;
   left: 0;
   z-index: -1;
-  width: 100vw;
-  height: 100vh;
-  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(199, 125, 255, 0.08), transparent);
+}
+
+body.modo-claro #fondoAnimado {
+  background: radial-gradient(circle at center, rgba(255,179,198,0.1), transparent);
+}
+
+/* ===== BOTON ARRIBA ===== */
+#btnArriba {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 48px;
+  height: 48px;
+  background-color: var(--resaltado);
+  color: var(--fondo);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#btnArriba svg {
+  width: 24px;
+  height: 24px;
+}
+
+#btnArriba:hover {
+  transform: scale(1.1);
+}
+
+#btnArriba.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Animacion rebote */
+@keyframes bounce {
+  0% { transform: scale(1); }
+  40% { transform: scale(0.9); }
+  60% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media (prefers-color-scheme: light) {
+  body {
+    --fondo: #fdfdfd;
+    --texto: #1c1c1e;
+  }
+}
+
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 1.8rem;
+  }
+
+  .grid {
+    gap: 1rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+}
+
+@media (hover: hover) {
+  .card:hover {
+    transform: translateY(-6px);
+  }
+
+  .toggle-theme:hover {
+    background: rgba(255,255,255,0.2);
+  }
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== ANIMACIoN PULSO ===== */
+.pulse {
+  animation: pulseAnim 0.3s ease;
+}
+
+@keyframes pulseAnim {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
 }
