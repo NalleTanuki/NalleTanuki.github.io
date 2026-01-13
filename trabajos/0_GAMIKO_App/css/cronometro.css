@@ -1,0 +1,75 @@
+/* ======== CONTENEDOR PRINCIPAL ======== */
+body{
+    background-color: #F5F5F7;
+}
+
+/* ======== TITULO ======== */
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    padding-top: 20px;
+    font-size: 2rem;
+}
+
+/* ======== CONTENEDOR ======== */
+.cronometro-container{
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 25px 30px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px #00000022;
+    text-align: center;
+}
+
+#display{
+    font-family: "Baloo 2", sans-serif;
+    font-weight: bold;
+    font-size: 4rem;
+    margin-bottom: 25px;
+}
+
+
+/* ======== BOTONES ======== */
+.botones-crono{
+    display:flex;
+    justify-content: space-between;
+}
+
+.btn-crono,
+#stopBtn{
+    width: 32%;
+    padding: 12px 0;
+    border: none;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-crono{
+    background-color: #2F68D8;
+}
+
+/* Hover */
+.btn-crono:hover{
+    background-color: #3A7DFF;
+}
+
+.btn-crono#stopBtn{
+    background-color: #FF4D6D;
+}
+
+.btn-crono#stopBtn:hover{
+    background-color: #FF6B85;
+}
+
+
+/* ------- RESPONSIVE ------- */
+@media (max-width: 600px){
+    h1{
+        font-size: 1.4rem;
+    }
+}

@@ -1,0 +1,36 @@
+.contenedor{
+    width: 100%;
+    background-color: #F5F5F7;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+h1{
+    text-align: center;
+}
+
+.img_contenedor{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.img_contenedor img{
+    width: 40%;
+    min-width: 200px;
+    border-radius: 6px;
+    transition: transform .2s;
+}
+
+/* ------- RESPONSIVE ------- */
+@media (max-width: 600px){
+
+    h1{
+        font-size: 1.4rem;
+    }
+
+    .img_contenedor img{
+        width: 90%;
+    }
+}

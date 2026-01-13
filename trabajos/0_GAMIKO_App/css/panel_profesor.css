@@ -1,0 +1,44 @@
+#contenedor-principal{
+    background-color: #F5F5F7;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+/* ------------------ BOTON ------------------ */
+.btn-ver{
+    background-color: #2F68D8;
+    color: #fff;
+    padding: 10px 50px;
+}
+
+/* Hover */
+.btn-ver:hover {
+    background-color: #3A7DFF;
+}
+
+
+span{
+    color: #FF4D6D;
+}
+
+
+/* ------------------ RESPONSIVE ------------------ */
+@media screen and (max-width: 900px) {
+    .btn-ver {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .btn-ver {
+        padding: 6px 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .btn-ver {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+}

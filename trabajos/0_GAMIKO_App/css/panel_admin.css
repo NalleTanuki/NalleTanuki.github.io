@@ -1,0 +1,374 @@
+/* ------------------ FORMULARIO ------------------ */
+#contenedor_acciones,
+#contenedor-asignatura,
+#contenedor-registros {
+    background-color: #F5F5F7;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+#contenedor-asignatura,
+#contenedor-registros{
+    margin-top: 2rem;
+}
+
+.form-crear {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-crear .fila {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+.form-crear .fila input,
+.form-crear .fila select {
+    flex: 1;
+}
+
+/* --- Fila final con boton + requisitos --- */
+.form-crear .fila-final {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+
+/* Ajustar ancho de ROL */
+.form-crear select[name="rol"] {
+    flex: 1;
+    min-width: 0; /* evitar q flex fuerce un ancho min */
+    box-sizing: border-box;
+}
+
+/* Boton CREAR USUARIO */
+.form-crear .fila-final .btn-crear {
+    width: auto;
+    flex: 0 0 auto;
+    padding: 10px 20px;
+}
+
+/* ------------------ INPUTS ------------------ */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 0;
+    border: 1px solid #f5f5f7;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Focus inputs */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus {
+    border-color: #3A7DFF;
+    box-shadow: 0 0 5px rgba(58, 125, 255, 0.5);
+    outline: none;
+}
+
+/* ----------- REQUISITOS contrasenha ----------- */
+#pass-requisitos {
+    list-style-type: none;
+    margin-top: -0.5rem;
+    margin-bottom: 0.5rem;
+    padding-left: 4rem;
+    opacity: 0;
+    max-height: 0;
+    width: 50%;
+    margin-left: 50%;
+    transition: all 0.3s ease;
+}
+
+#pass-requisitos.mostrar {
+    opacity: 1;
+    max-height: 200px;
+}
+
+.pass-requisitos li {
+    margin-bottom: 0.25rem;
+    color: #888;
+    transition: color 0.3s ease;
+}
+
+.pass-requisitos li::before {
+    content: "• ";
+}
+
+/* VALIDO */
+.pass-requisitos li.valido {
+    color: #28a745;
+    font-weight: 600;
+}
+
+/* INVALIDO */
+.pass-requisitos li.invalido {
+    color: #ff4d6d;
+}
+
+/* ----------- CAMPO CONTRASENHA OJO ----------- */
+.campo-pass {
+    position: relative;
+    flex: 1 1 0;
+    display: flex;
+    align-items: center;
+}
+
+.campo-pass input[type="password"],
+.campo-pass input[type="text"] {
+    width: 100%;
+    padding-right: 40px;
+}
+
+/* ----------- BOTON OJO ----------- */
+#togglePassword {
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    padding: 8px;
+}
+
+#togglePassword img {
+    width: 22px;
+    height: 22px;
+    align-items: center;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+#togglePassword img.fade {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+/* ------------------ BOTONES ------------------ */
+/* Estilo base */
+.btn-modificar,
+.btn-modificar-asig,
+.form-crear input.btn-crear {
+    background-color: #2F68D8;
+    color: #fff;
+}
+
+/* Hover */
+.btn-modificar:hover,
+.btn-modificar-asig:hover,
+.form-crear input.btn-crear:hover {
+    background-color: #3A7DFF;
+}
+
+/* BOTON eliminar */
+.btn-eliminar {
+    background-color: #2E2E2E;
+    color: #ffffff;
+}
+
+.btn-eliminar:hover {
+    background-color: #1E1E1E;
+}
+
+/* Contenedor acciones (modif/eliminar) */
+.acciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.acciones form {
+    display: inline-flex;
+    margin: 0;
+}
+
+/* ------------------ MENSAJES ------------------ */
+p {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #ff4d6d;
+}
+
+/* ------------------ TABLA SCROLL ------------------ */
+.tabla-scroll{
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 10px;
+}
+
+/* ajuste scroll */
+.tabla-scroll::-webkit-scrollbar{
+    height: 8px;
+}
+
+.tabla-scroll::-webkit-scrollbar-thumb{
+    background-color: rgba(47, 104, 216, 0.4);
+    border-radius: 10px;
+}
+
+/* ------------------ TARJETA EDITAR ------------------ */
+.card {
+    display: none;
+}
+
+#form-editar-usu,
+#form-editar-asig {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem
+}
+
+#editar-usuario {
+    display: none;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ------------------ RESPONSIVE ------------------ */
+@media screen and (max-width: 900px) {
+    .form-crear{
+        gap: 0.5rem;
+    }
+
+    .form-crear .fila {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .form-crear .fila input,
+    .form-crear .fila select{
+        margin-bottom: 0.5rem;
+    }
+
+    .form-crear .fila-final{
+        margin-top: 0.8rem;
+    }
+
+    .card {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    select,
+    input[type="submit"],
+    button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .form-crear .fila-final {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-crear .fila-final .btn-crear {
+        width: 100%;
+    }
+
+    #pass-requisitos{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 600px){
+    table td:nth-child(3),
+    td:nth-child(4),
+    td:nth-child(6) {
+        max-width: 60px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .acciones {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .acciones form{
+        width: 100%;
+    }
+
+    .acciones button,
+    .acciones .btn-modificar,
+    .acciones .btn-modificar-asig,
+    .acciones .btn-eliminar {
+        width: 100%;
+    }
+
+    /* Reducir txt de botones (M) Modificar y (E) Eliminar */
+    .btn-modificar::after,
+    .btn-modificar-asig::after{
+        content: 'M';
+    }
+
+    .btn-eliminar::after{
+        content: 'E';
+    }
+
+    /* Ocultar el txto original */
+    .btn-modificar,
+    .btn-modificar-asig,
+    .btn-eliminar {
+        font-size: 0;
+        padding: 4px !important;
+        min-width: auto;
+    }
+
+    .btn-modificar::after,
+    .btn-modificar-asig::after,
+    .btn-eliminar::after{
+        font-size: 16px;
+        color: #ffffff;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .form-crear{
+        gap: 0.4rem;
+    }
+
+    .form-crear .fila input,
+    .form-crear .fila select {
+        margin-bottom: 0.4rem;
+        font-size: 13px;
+        padding: 6px;
+    }
+    
+    .card {
+        width: 100%;
+        padding: 0.8rem;
+        border-radius: 5px;
+    }
+}

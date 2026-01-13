@@ -1,0 +1,139 @@
+/* Contenedor principal */
+#contenedor-principal{
+    background-color: #F5F5F7;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+/* H1 */
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    padding-top: 20px;
+}
+
+/* Contenedor superior (titulo y asignatura) */
+#contenedorSup{
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    border: 2px solid #e0e0e0;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
+}
+
+#contenedorSup label {
+    font-weight: 600;
+    display: block;
+    margin-top: 10px;
+}
+
+#contenedorSup input[type="text"],
+#contenedorSup select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 4px;
+    border: 1px solid #bbbbbb;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: 0.2s;
+}
+
+#contenedorSup input[type="text"]:focus,
+#contenedorSup select:focus {
+    border-color: #3A7DFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(58,125,255,0.3);
+}
+
+/* Contenedor preguntas */
+#contenedorPreguntas{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Contendor pregunta */
+.pregunta-box{
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    border: 2px solid #e0e0e0;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    transition: 0.2s ease-in-out;
+}
+
+/* HOVER */
+.pregunta-box:hover{
+    border-color: #3a7dff;
+    box-shadow: 0 4px 10px rgba(58,125,255,0.15);
+}
+
+/* Titulo pregunta */
+.titulo-pregunta{
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #2f68f8;
+}
+
+/* labels / campos txt */
+.pregunta-box label {
+    font-weight: 600;
+    display: block;
+    margin-top: 10px;
+}
+
+.pregunta-box input[type="text"],
+.pregunta-box textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 4px;
+    border: 1px solid #bbbbbb;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: 0.2s;
+}
+
+.pregunta-box input[type="text"]:focus,
+.pregunta-box textarea:focus {
+    border-color: #3A7DFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(58,125,255,0.3);
+}
+
+/* Boton ELIMINAR */
+.btnEliminar {
+    background-color: #FF4D6D;
+    color: white;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-weight: 600;
+    transition: 0.2s ease-in-out;
+}
+
+.btnEliminar:hover {
+    background-color: #ff6b85;
+}
+
+
+/* Boton AGREGAR */
+#btnAgregar {
+    margin-top: 25px;
+    padding: 12px 18px;
+    background-color: #2F68D8;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#btnAgregar:hover {
+    background-color: #3A7DFF;
+}

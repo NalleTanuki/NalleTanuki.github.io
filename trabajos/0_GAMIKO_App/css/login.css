@@ -1,0 +1,231 @@
+/* Centrar contenido vertical y horizontal */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+}
+
+/* Enlaces */
+a {
+    text-decoration: none;
+}
+
+/* ----------- LOGO ----------- */
+.logo-container{
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.logo{
+    width: 320px;
+    height: auto;
+}
+
+/* ----------- FORMULARIO ----------- */
+/* contenedor */
+form {
+    width: 500px;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+/* Botones y Cajas */
+button, input[type="submit"] {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+/* Estilos base para mail y cotnrasenha */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid #f5f5f5;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Foco en campos */
+input[type="text"],
+input[type="email"]:focus,
+input[type="password"]:focus {
+    font-family: inherit;
+    font-size: 16px;
+    border-color: #3A7DFF;
+    box-shadow: 0 0 5px rgba(58, 125, 255, 0.5);
+    outline: none;
+}
+
+/* Placeholder igual que el texto del input */
+input[type="text"],
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+    font-family: inherit;
+    font-size: 16px;
+    color: #999;
+}
+
+
+/* Forzar los estilos para que sean igual cuando se muestre la contrasenha */
+input[type="password"],
+input[type="text"].pass-campo {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid #f5f5f5;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 16px;
+    box-sizing: border-box;
+    height: 40px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Mismo efecto al enfocar campo cotnrasenha cuando se muestre */
+input[type="text"]:focus {
+    border-color: #3A7DFF;
+    box-shadow: 0 0 5px rgba(58, 125, 255, 0.5);
+    outline: none;
+}
+
+/* ----------- CONTENEDOR CONTRASENHA ----------- */
+/* aGRUPAR INPUT Y BOTON "VER" en un bloque relativo */
+.pass-container{
+    position: relative;
+    display: block;
+}
+
+/* Ajustar padding para espacio icono del ojo */
+.pass-container input{
+    width: 100%;
+    padding-right: 40px;
+    height: 40px;
+    line-height: 1.2;
+}
+
+/* ----------- BOTON OJO ----------- */
+#togglePassword{
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    padding: 8px;
+}
+
+/* Imagen ojo */
+#togglePassword img{
+    width: 24px;
+    height: 24px;
+    align-items: center;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* Efecto al cambiar */
+#togglePassword img.fade{
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+/* ----------- BOTON ENVIAR ----------- */
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #2f68d8;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+input[type="submit"]:hover {
+    background-color: #3A7DFF;
+    transform: scale(1.02);
+}
+
+/* ----------- MENSAJE ERROR ----------- */
+p {
+    color: #ff4d6d;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+
+/* ----------- RESPONSIVE ----------- */
+/* TABLET */
+@media screen and (max-width: 1024px) {
+    form{
+        width: 80%;
+        padding: 1.5rem;
+    }
+
+    .logo{
+        width: 250px;
+    }
+}
+
+/* MOVILES grandes */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    form {
+        width: 90%;
+        padding: 1.2rem;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    input[type="submit"] {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .logo {
+        width: 200px;
+    }
+}
+
+/* MOVILES peques */
+@media screen and (max-width: 480px) {
+    .logo {
+        width: 160px;
+    }
+
+    form {
+        width: 100%;
+        padding: 1rem;
+        border-radius: 0;
+    }
+
+    #togglePassword img {
+        width: 20px;
+        height: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}

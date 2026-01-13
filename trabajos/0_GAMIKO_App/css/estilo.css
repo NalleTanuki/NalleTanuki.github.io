@@ -1,0 +1,113 @@
+/* Importar fuente Nunito Sans */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
+
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos globales */
+body {
+    font-family: "Nunito Sans", sans-serif;
+    background-color: #ffffff;
+    color: #2e2e2e;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4{
+    font-family: "Baloo 2", sans-serif;
+}
+
+a, a:hover {
+    font-family: "Baloo 2", sans-serif;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ------------------ TABLAS ------------------ */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+table th,
+table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #f5f5f7;
+    text-align: left;
+}
+
+table th {
+    background-color: #2f68d8;
+    color: #fff;
+    font-weight: 600;
+}
+
+table tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+
+/* ------------------ BOTONES ------------------ */
+input[type="submit"],
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s, color 0.3s;
+}
+
+/* Hover general */
+input[type="submit"]:hover,
+button:hover{
+    transform: scale(1.02);
+}
+
+
+
+/* ------------------ RESPONSIVE ------------------ */
+@media screen and (max-width: 900px) {
+    table th,
+    table td {
+        padding: 0.5rem;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    table th,
+    table td {
+        font-size: 12px;
+        padding: 0.4rem;
+    }
+}
+
+
+
+/* Cumplir ACCESIBILIDAD */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+    white-space: nowrap;
+}

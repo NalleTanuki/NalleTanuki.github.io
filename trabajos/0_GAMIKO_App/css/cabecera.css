@@ -1,0 +1,184 @@
+body {
+    margin-left: 230px;
+}
+
+/* ======== MENU ESCRITORIO ======== */
+#menu-escritorio {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 230px;
+    height: 100vh;
+    background: #2F68D8;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+}
+
+#menu-escritorio a {
+    color: white;
+    text-decoration: none;
+    margin: 0.5rem 0;
+    font-weight: 600;
+}
+
+#menu-escritorio .logout {
+    margin-top: auto;
+    font-weight: 800;
+    align-self: center;
+}
+
+#menu-escritorio .enlace::before {
+    content: "• ";
+    margin-top: 10px;
+}
+
+#menu-escritorio .enlace:hover {
+    color: #FFD166;
+}
+
+#menu-escritorio p {
+    color: white;
+    font-family: inherit;
+}
+
+/* ======== Estilo nombre usuario en escritorio ======== */
+#info-usuario{
+    padding-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#info-usuario img{
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+/* ======== MENU MOVIL ======== */
+
+#menu-movil{
+    display: none;
+        flex-direction: column;
+    background: #2F68D8;
+    padding: 1rem;
+}
+
+#menu-movil a {
+    color: white;
+    padding: 0.5rem 0;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#menu-movil .logout {
+    margin-top: 1rem;
+    font-weight: 800;
+}
+
+#header-movil {
+    display: none;
+    top: 0;
+    z-index: 999;
+    background: #2F68D8;
+    color: white;
+    width: 100%;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#btn-menu {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+}
+
+/* ======== Estilo del nombre de usuario ======== */
+.usuario-nombre {
+    color: white;
+    font-family: inherit;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ======== SUBMENU ======== */
+/* Contenedor del submenu */
+.submenu {
+    position: relative;
+}
+
+/* Titulo (Alumnos) */
+.submenu-titulo {
+    display: block;
+    cursor: pointer;
+}
+
+/* Opciones ocultas al inicio */
+.submenu-opciones {
+    display: none;
+    flex-direction: column;
+    background: #1F54B5;
+    padding-left: 1rem;
+    border-left: 3px solid #ffffff44;
+    margin-top: 5px;
+}
+
+/* Enlaces submenu */
+.submenu-opciones a {
+    color: white;
+    text-decoration: none;
+    margin: 4px 0;
+}
+
+/* Mostrar submenu al pasar raton */
+.submenu:hover .submenu-opciones {
+    display: flex;
+}
+
+#menu-movil .submenu{
+    padding-left: 1.5rem;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+
+/* ======== RESPONSIVE ======== */
+
+@media (max-width: 900px) {    
+    header {
+        margin-left: 0;
+    }
+
+    /* Mostrar movil */
+    #header-movil {
+        display: flex;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+    }
+
+    /* Ocultar en movil */
+    #menu-escritorio {
+        display: none;
+    }
+
+    body{
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    #menu-movil{
+        display: none;
+        flex-direction: column;
+    }
+
+    #menu-movil a{
+        align-self: center;
+    }
+}
