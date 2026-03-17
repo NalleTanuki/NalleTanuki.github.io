@@ -1,0 +1,37 @@
+<header th:fragment="cabecera">
+	<div id="cabecera_izq">
+	    <img src="imagenes/logo.png" height="96px" width="96px">
+	</div>
+	
+	<div id="cabecera_cen">
+	    <h1>Raíces & Recetas</h1>
+	    <h2>Recetas del Mundo</h2>
+	</div>
+	
+	<div id="cabecera_der">
+	    <img src="imagenes/facebook.png" height="48px" width="48px">
+	    <img src="imagenes/instagram.png" height="48px" width="48px">
+	</div>
+</header>
+
+
+<nav th:fragment="menu">
+    <ul>
+        <li>
+            <a th:href="@{/}">Añadir recetas</a>
+        </li>
+        <li>
+            <a th:href="@{/lista}">Recetas</a>
+        </li>
+		<li>
+		    <a th:href="@{/ingredientes}">Ingredientes</a>
+		</li>
+    </ul>
+</nav>
+
+<footer th:fragment="pie">
+    el pie de la pagina
+
+    <a href="">hola</a>
+    <a href="">adios</a>
+</footer>	

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Disco Stu</title>
+	<link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+
+	<header th:include="plantillas.html::cabecera"></header>
+
+	<nav th:include="plantillas.html::menu"></nav>
+
+	<main>
+		<section>
+			<h1 th:text="${mensaje}"></h1>
+
+			<!-- EDITAR -->
+			<form th:action="@{/AgregarDisco}" method="POST" th:object="${obj_disco}">
+				<div class="campo">
+					<label>Título del disco:</label>
+					<input type="text" th:field="*{titulo}" required>
+				</div>
+
+				<div class="campo">
+					<label>Año:</label>
+					<input type="text" th:field="*{anho}" pattern="\d{4}" required>
+				</div>
+
+				<div class="campo">
+					<label>Número de canciones:</label>
+					<input type="number" th:field="*{numCanciones}" min="1" required>
+				</div>
+
+				<div class="campo">
+					<label>Precio:</label>
+					<input type="number" th:field="*{precio}" min="1" step="0.01" required>
+				</div>
+
+				<div class="campo">
+					<label for="banda_id">Banda:</label>
+					<select th:field="*{banda.id}" required>
+						<option th:each="elem : ${listaBandas}" th:value="${elem.id}" th:text="${elem.nombre}"></option>
+					</select>
+					<br>
+					<input type="submit" value="Agregar banda" th:formaction="@{/AgregarBandaCV}">
+				</div>
+	
+				<input type="text" name="origen" value="menu_discos" hidden required>
+				<input type="submit" value="Insertar Disco">
+			</form>
+
+			
+
+			<div class="ordenar-container">
+			    <span class="ordenar-label">Ordenar por:</span>
+
+			    <a th:href="@{/MenuDiscos(orden='precioAsc')}" class="btn-orden">
+			        Precio ↑
+			    </a>
+
+			    <a th:href="@{/MenuDiscos(orden='precioDesc')}" class="btn-orden">
+			        Precio ↓
+			    </a>
+
+			    <a th:href="@{/MenuDiscos}" class="btn-orden btn-reset">
+			        Quitar orden
+			    </a>
+			</div>
+			
+
+			
+			<!-- TABLA DISCOS -->
+			<table border="1">
+				<thead>
+					<tr>
+						<th>Título</th>
+						<th>Año</th>
+						<th>Nº Canciones</th>
+						<th>Precio</th>
+						<th>Banda</th>
+						<th>Acciones</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="elem : ${listaDiscos}">
+						<td th:text="${elem.titulo}"></td>
+						<td th:text="${elem.anho}"></td>
+						<td th:text="${elem.numCanciones}"></td>
+						<td th:text="${elem.precio + '€'}"></td>
+						<td th:text="${elem.banda.nombre}"></td>
+						<td>
+							<a th:href="@{/ModificarDisco(id=${elem.id})}">
+								<button>Editar</button>
+							</a>
+							<a th:href="@{/BorrarDisco(id=${elem.id})}"
+								onclick="return confirm('¿Seguro que quieres borrar este disco?')">
+								<button>Borrar</button>
+							</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+	</main>
+
+	<footer th:include="plantillas.html::pie"></footer>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>404 - Página no encontrada | Raíces & Recetas</title>
+	<link rel="stylesheet" th:href="@{/styles/styles.css}">
+</head>
+
+<body>
+	<header>
+		<div id="cabecera_izq">
+			<img th:src="@{/imagenes/logo.png}" height="96px" width="96px">
+		</div>
+
+		<div id="cabecera_cen">
+			<h1>Raíces & Recetas</h1>
+			<h2>Recetas del Mundo</h2>
+		</div>
+
+		<div id="cabecera_der">
+			<img th:src="@{/imagenes/facebook.png}" height="48px" width="48px">
+			<img th:src="@{/imagenes/instagram.png}" height="48px" width="48px">
+		</div>
+	</header>
+
+	<nav th:include="plantillas.html::menu"></nav>
+
+	<main>
+		<h2>Ups...</h2>
+		<h3>Página no encontrada (404)</h3>
+
+		<p>La página que estás buscando no existe o fue movida.</p>
+
+		<a th:href="@{/MenuRecetas}" class="boton">Volver al menú</a>
+	</main>
+
+	<footer>
+		el pie de la pagina
+
+		<a href="">hola</a>
+		<a href="">adios</a>
+	</footer>
+</body>
+
+</html>

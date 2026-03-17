@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Raíces & Recetas</title>
+	<link rel="stylesheet" th:href="@{styles/styles.css}">
+	<link rel="stylesheet" th:href="@{styles/styles_form_ingr.css}">
+
+	<script th:src="@{js/cheks.js}"></script>
+</head>
+
+<body>
+	<header th:include="plantillas.html::cabecera"></header>
+
+	<nav th:include="plantillas.html::menu"></nav>
+
+	<main>
+
+		<section class="modificar-section">
+
+			<h1>Modificar receta</h1>
+
+			<form th:action="@{/AgregarIngredientesReceta}" method="post">
+
+				<input type="hidden" name="id" th:value="${obj_receta.id}">
+
+				<h2 th:text="${obj_receta.nombre}"></h2>
+				<h3 th:text="${obj_receta.tiempo}"></h3>
+				<h3 th:text="${obj_receta.pais.nombre}"></h3>
+				<h3 th:text="${obj_receta.dificultad.nombre}"></h3>
+
+				<hr>
+
+				<div class="contenedor-ingredientes">
+
+				    <article class="card-ingrediente" th:each="elem : ${listaIngredientes}">
+				        <h4 th:text="${elem.nombre}"></h4>
+
+				        <input type="text" th:name="'ingr_'+${elem.id}" placeholder="Cantidad">
+
+				        <label>
+				            <input type="checkbox" th:name="'chk_'+${elem.id}" th:value="${elem.id}">
+				        </label>
+				    </article>
+
+				</div>
+				
+				<br>
+				<div class="boton-centro">
+				    <button type="submit">Guardar ingredientes</button>
+				</div>
+
+			</form>
+
+		</section>
+	</main>
+
+	<footer th:include="plantillas.html::pie"></footer>
+</body>
+
+</html>

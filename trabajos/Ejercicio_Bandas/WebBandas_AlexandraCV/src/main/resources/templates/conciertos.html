@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Disco Stu</title>
+	<link rel="stylesheet" href="styles/styles.css">
+	
+	<!-- Para seleccionar varias bandas cuando se vaya a crear un conci SELECT2 (CDN) -->
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+</head>
+
+<body>
+
+	<header th:include="plantillas.html::cabecera"></header>
+
+	<nav th:include="plantillas.html::menu"></nav>
+
+	<main>
+		<section>
+			<h1 th:text="${mensaje}"></h1>
+
+			<!-- EDITAR -->
+			<form th:action="@{/AgregarConcierto}" method="POST" th:object="${obj_concierto}">
+				<div class="campo">
+					<label>Fecha:</label>
+					<input type="date" th:field="*{fecha}" required>
+				</div>
+
+				<div class="campo">
+					<label>Hora:</label>
+					<input type="time" th:field="*{hora}" required>
+				</div>
+
+				<div class="campo">
+					<label>Precio:</label>
+					<input type="number" th:field="*{precio}" min="1" step="0.01" required placeholder="20.90">
+				</div>
+
+				<div class="campo">
+					<label for="banda_id">Bandas:</label>
+					<select id="bandasSelect" name="idsBandas" multiple size="6">
+						<option th:each="elem : ${listaBandas}" th:value="${elem.id}" th:text="${elem.nombre}"></option>
+					</select>
+<!--					<br>-->
+<!--					<input type="submit" value="Agregar banda" th:formaction="@{/AgregarBandaCV}">-->
+				</div>
+
+				<div class="campo">
+					<label for="pais_id">País:</label>
+					<select th:field="*{pais.id}" required>
+						<option th:each="elem : ${listaPaises}" th:value="${elem.id}" th:text="${elem.nombre}">
+						</option>
+					</select>
+<!--					<br>-->
+<!--					<input type="submit" value="Agregar país" th:formaction="@{/AgregarPaisCV}">-->
+				</div>
+
+				<input type="submit" value="Insertar concierto">
+			</form>
+
+
+
+			<div class="ordenar-container">
+				<span class="ordenar-label">Ordenar por:</span>
+
+				<a th:href="@{/MenuConciertos(orden='fechaAsc')}" class="btn-orden">
+					Fecha ↑
+				</a>
+
+				<a th:href="@{/MenuConciertos}" class="btn-orden btn-reset">
+					Quitar orden
+				</a>
+			</div>
+
+
+
+			<!-- TABLA CONCIERTOS -->
+			<table border="1">
+				<thead>
+					<tr>
+						<th>Fecha</th>
+						<th>Hora</th>
+						<th>Precio</th>
+						<th>Bandas</th>
+						<th>País</th>
+						<th>Acciones</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="elem : ${listaConciertos}">
+						<td th:text="${elem.fecha}"></td>
+						<td th:text="${elem.hora}"></td>
+						<td th:text="${elem.precio + '€'}"></td>
+						<td>
+							<span th:each="b:${elem.listaBandas}" class="etiqueta" th:text="${b.nombre}"></span>
+						</td>
+						<td th:text="${elem.pais.nombre}"></td>
+						<td>
+							<a th:href="@{/ModificarConcierto(id=${elem.id})}">
+								<button>Editar</button>
+							</a>
+							<a th:href="@{/BorrarConcierto(id=${elem.id})}"
+								onclick="return confirm('¿Seguro que quieres borrar este concierto?')">
+								<button>Borrar</button>
+							</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+	</main>
+
+	<footer th:include="plantillas.html::pie"></footer>
+	
+	
+	<!--	SCRIPT     -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('#bandasSelect').select2({
+				placeholder: "Selecciona bandas",
+				width: '100%'
+			});
+		});
+	</script>
+	
+	
+</body>
+
+</html>

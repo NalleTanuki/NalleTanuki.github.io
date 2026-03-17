@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Disco Stu</title>
+	<link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+
+	<header th:include="plantillas.html::cabecera"></header>
+
+	<nav th:include="plantillas.html::menu"></nav>
+
+	<main>
+		<section>
+			<h1 th:text="${mensaje}"></h1>
+
+			<form th:action="@{/ModificarDisco}" method="POST" th:object="${obj_disco}">
+				<input type="hidden" th:field="*{id}" readonly required>
+
+				<div class="campo">
+					<label>Título:</label>
+					<input type="text" th:field="*{titulo}" required>
+				</div>
+
+				<div class="campo">
+					<label>Año:</label>
+					<input type="text" th:field="*{anho}" min="4" required>
+				</div>
+
+				<div class="campo">
+					<label>Número de canciones:</label>
+					<input type="number" th:field="*{numCanciones}" min="1" required>
+				</div>
+
+				<div class="campo">
+					<label>Precio:</label>
+					<input type="number" th:field="*{precio}" min="1" step="0.01" required>
+				</div>
+
+				<div class="campo">
+					<label for="banda_id">Banda:</label>
+					<select th:field="*{banda.id}" required>
+						<option th:each="elem : ${listaBandas}" th:value="${elem.id}" th:text="${elem.nombre}">
+						</option>
+					</select>
+					<br>
+					<input type="submit" value="Agregar banda" th:formaction="@{/AgregarBandaCV}">
+				</div>
+				<br>
+				<input type="text" name="origen" value="frm_modif_disco" hidden required>
+				<input type="submit" value="Modificar disco">
+			</form>
+		</section>
+	</main>
+
+	<footer th:include="plantillas.html::pie"></footer>
+</body>
+
+</html>

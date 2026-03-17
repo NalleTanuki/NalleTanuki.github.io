@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Raíces & Recetas</title>
+	<link rel="stylesheet" th:href="@{/styles/styles.css}">
+</head>
+
+<body>
+	<header>
+		<div id="cabecera_izq">
+			<img th:src="@{/imagenes/logo.png}" height="96px" width="96px">
+		</div>
+
+		<div id="cabecera_cen">
+			<h1>Raíces & Recetas</h1>
+			<h2>Recetas del Mundo</h2>
+		</div>
+
+		<div id="cabecera_der">
+			<img th:src="@{/imagenes/facebook.png}" height="48px" width="48px">
+			<img th:src="@{/imagenes/instagram.png}" height="48px" width="48px">
+		</div>
+	</header>
+
+	<nav th:include="plantillas.html::menu"></nav>
+
+	<main>
+		<section>
+<!--			<h1 th:text="${mensaje}"></h1>-->
+
+			<h3>Lista de ingredientes</h3>
+			<br><br>
+
+			<form th:action="@{/AgregarIngrediente}" th:object="${obj_ingrediente}" method="post">
+
+				<label>Nombre:</label>
+				<input type="text" th:field="*{nombre}" required placeholder="Nuevo ingrediente"><br><br>
+
+				<br><br>
+
+				<button type="submit">Guardar ingrediente</button>
+
+			</form>
+
+
+			<table>
+				<thead>
+					<tr>
+<!--					<th>ID</th>-->
+						<th>Nombre</th>
+					</tr>
+				</thead>
+
+				<tbody>
+
+					<tr th:each="elem : ${listaIngredientes}">
+<!--						<td th:text="${elem.id}"></td>-->
+						<td th:text="${elem.nombre}"></td>
+						<td>
+							<a th:href="@{/ModificarIngrediente(id=${elem.id})}">Modificar</a>
+						</td>
+					</tr>
+
+				</tbody>
+			</table>
+		</section>
+	</main>
+
+	<footer>
+		el pie de la pagina
+
+		<a href="">hola</a>
+		<a href="">adios</a>
+	</footer>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Raíces & Recetas</title>
+	<link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+	<header>
+		<div id="cabecera_izq">
+			<img th:src="@{/imagenes/logo.png}" height="96px" width="96px">
+		</div>
+
+		<div id="cabecera_cen">
+			<h1>Raíces & Recetas</h1>
+			<h2>Recetas del Mundo</h2>
+		</div>
+
+		<div id="cabecera_der">
+			<img th:src="@{/imagenes/facebook.png}" height="48px" width="48px">
+			<img th:src="@{/imagenes/instagram.png}" height="48px" width="48px">
+		</div>
+	</header>
+
+	<nav th:include="plantillas.html::menu"></nav>
+
+	<main>
+		<section>
+			<h1 th:text="${mensaje}"></h1>
+
+			<h3>Crear Receta</h3>
+			<br><br>
+
+			<form th:action="@{/AgregarReceta}" th:object="${obj_receta}" method="post">
+
+				<label>Nombre:</label>
+				<input type="text" name="nombre" th:field="*{nombre}" required placeholder="Nueva comida"><br><br>
+
+				<label>Tiempo:</label>
+				<input type="text" name="tiempo" th:field="*{tiempo}" required placeholder="1h 30'"><br><br>
+
+				<label for="dificultad_id">Dificultad:</label>
+				<select th:field="*{dificultad.id}" required>
+					<option th:each="elem : ${listaDificultades}" th:value="${elem.id}" th:text="${elem.nombre}">
+					</option>
+				</select><br><br>
+
+				<label for="pais_id">País:</label>
+				<select th:field="*{pais.id}" required>
+					<option th:each="elem : ${listaPaises}" th:value="${elem.id}" th:text="${elem.nombre}"></option>
+				</select><br><br>
+
+				<button type="submit">Guardar y añadir ingredientes</button>
+
+			</form>
+
+
+			<table>
+				<thead>
+					<tr>
+<!--					<th>ID</th>-->
+						<th>Nombre</th>
+						<th>Tiempo</th>
+						<th>Dificultad</th>
+						<th>País</th>
+						<th>Opciones</th>
+					</tr>
+				</thead>
+
+				<tbody>
+
+					<tr th:each="elem : ${listaRecetas}">
+<!--						<td th:text="${elem.id}"></td>-->
+						<td th:text="${elem.nombre}"></td>
+						<td th:text="${elem.tiempo}"></td>
+						<td th:text="${elem.dificultad.nombre}"></td>
+						<td th:text="${elem.pais.nombre}"></td>
+						<td>
+							<a th:href="@{/DetallesReceta(id=${elem.id})}">Detalles</a>
+							<a th:href="@{/ModificarReceta(id=${elem.id})}">Modificar</a>
+							<a th:href="@{/BorrarReceta(id=${elem.id})}"
+							onclick="return confirm('¿Seguro que quieres borrar esta receta?')">Borrar</a>
+						</td>
+					</tr>
+
+				</tbody>
+			</table>
+		</section>
+	</main>
+
+	<footer>
+		el pie de la pagina
+
+		<a href="">hola</a>
+		<a href="">adios</a>
+	</footer>
+</body>
+
+</html>

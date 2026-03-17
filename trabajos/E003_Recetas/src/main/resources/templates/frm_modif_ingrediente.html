@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Raíces & Recetas</title>
+	<link rel="stylesheet" th:href="@{styles/styles.css}">
+	<link rel="stylesheet" th:href="@{styles/styles_modif_receta.css}">
+
+	<script th:src="@{js/cheks.js}"></script>
+</head>
+
+<body>
+	<header th:include="plantillas.html::cabecera"></header>
+
+	<nav th:include="plantillas.html::menu"></nav>
+
+	<main>
+
+		<section class="modificar-section">
+
+			<h1>Modificar ingrediente</h1>
+
+			<form th:action="@{/ModificarIngrediente}" th:object="${obj_ingrediente}" method="post">
+
+			    <input type="hidden" th:field="*{id}">
+
+			    <input type="text" th:field="*{nombre}" required>
+
+			    <button type="submit">Actualizar</button>
+
+			</form>
+
+		</section>
+	</main>
+
+	<footer th:include="plantillas.html::pie"></footer>
+</body>
+
+</html>

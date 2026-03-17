@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Raíces & Recetas</title>
+	<link rel="stylesheet" th:href="@{styles/styles.css}">
+	<link rel="stylesheet" th:href="@{styles/styles_modif_receta.css}">
+
+	<script th:src="@{js/cheks.js}"></script>
+</head>
+
+<body>
+	<header th:include="plantillas.html::cabecera"></header>
+
+	<nav th:include="plantillas.html::menu"></nav>
+
+	<main>
+
+		<section class="modificar-section">
+
+			<h1>Modificar receta</h1>
+
+			<form th:action="@{/AgregarIngredientesReceta}" method="post">
+
+				<input type="hidden" name="id" th:value="${obj_receta.id}">
+
+				<div th:each="elem : ${listaIngredientes}">
+					<h4 th:text="${elem.nombre}"></h4>
+					<input type="text" th:name="'ingr_'+${elem.id}" th:value="${cantidadesMap != null and cantidadesMap.containsKey(elem.id) ? cantidadesMap[elem.id] : ''}">
+					<input type="checkbox" th:name="'chk_'+${elem.id}" th:value="${elem.id}" th:checked="${ingredientesRecetaIds.contains(elem.id)}">
+				</div>
+
+				<button type="submit">Guardar ingredientes</button>
+			</form>
+
+		</section>
+	</main>
+
+	<footer th:include="plantillas.html::pie"></footer>
+</body>
+
+</html>

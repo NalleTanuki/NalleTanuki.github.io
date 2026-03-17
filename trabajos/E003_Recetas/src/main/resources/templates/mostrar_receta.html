@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Raíces & Recetas</title>
+	<link rel="stylesheet" th:href="@{styles/styles.css}">
+	<link rel="stylesheet" th:href="@{styles/styles_detalle.css}">
+</head>
+
+<body>
+	<header>
+		<div id="cabecera_izq">
+			<img th:src="@{imagenes/logo.png}" height="96px" width="96px">
+		</div>
+
+		<div id="cabecera_cen">
+			<h1>Raíces & Recetas</h1>
+			<h2>Recetas del Mundo</h2>
+		</div>
+
+		<div id="cabecera_der">
+			<img th:src="@{imagenes/facebook.png}" height="48px" width="48px">
+			<img th:src="@{imagenes/instagram.png}" height="48px" width="48px">
+		</div>
+	</header>
+
+	<nav th:include="plantillas.html::menu"></nav>
+
+	<main>
+		<div class="boton-volver">
+			<a href="/lista" class="btn_volver">← Volver a recetas</a>
+		</div>
+
+
+		<section class="detalle-receta">
+			<h2 th:text="${receta.nombre}"></h2>
+
+			<div class="detalle-meta">
+				<span>⏱ <span th:text="${receta.tiempo}"></span></span>
+				<span class="badge-dificultad" th:text="${receta.dificultad.nombre}"></span>
+			</div>
+
+			<div class="separador"></div>
+
+			<h3>Ingredientes</h3>
+
+			<ul class="lista-ingredientes">
+				<li th:each="ri : ${receta.listaIngredientes}">
+					<span class="ingrediente-nombre" th:text="${ri.ingrediente.nombre}"></span>
+					-
+					<span class="ingrediente-cantidad" th:text="${ri.cantidad}"></span>
+				</li>
+			</ul>
+		</section>
+	</main>
+
+	<footer>
+		el pie de la pagina
+
+		<a href="">hola</a>
+		<a href="">adios</a>
+	</footer>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+/* ===================== DETALLE RECETA ===================== */
+
+.detalle-receta {
+    max-width: 900px;
+    margin: auto;
+    padding: 50px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+/* Titulo principal */
+.detalle-receta h2 {
+    font-size: 38px;
+    font-family: var(--fuenteSerif);
+    color: var(--colorPrincipal);
+    margin-bottom: 10px;
+}
+
+/* Tiempo */
+.detalle-meta {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    font-size: 15px;
+    color: #777;
+}
+
+/* Dificul */
+.badge-dificultad {
+    background: var(--colorContraste);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Separador */
+.separador {
+    height: 3px;
+    width: 60px;
+    background: var(--colorPrincipal);
+    margin: 25px 0;
+    border-radius: 10px;
+}
+
+/* Ingredientes */
+.lista-ingredientes {
+    list-style: none;
+    margin-top: 20px;
+    padding: 0;
+}
+
+.lista-ingredientes li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+    margin-bottom: 12px;
+    background: #fafafa;
+    border-radius: 12px;
+    border-left: 6px solid var(--colorPrincipal);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lista-ingredientes li:hover {
+    transform: translateX(6px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+}
+
+.ingrediente-nombre {
+    font-weight: 600;
+    color: #333;
+}
+
+.ingrediente-cantidad {
+    font-weight: bold;
+    color: var(--colorPrincipal);
+}
+
+
+/* ===================== DETALLE RECETA ===================== */
+.boton-volver{
+    margin-top:40px;
+    text-align:center;
+}
+
+.btn-volver{
+    display:inline-block;
+    padding:12px 28px;
+    background-color: var(--colorContraste);
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    border-radius:30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+.btn-volver:hover{
+    background-color: var(--colorPrincipal);
+    transform: translateY(-3px);
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Disco Stu</title>
+	<link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+
+	<header th:include="plantillas.html::cabecera"></header>
+
+	<nav th:include="plantillas.html::menu"></nav>
+
+	<main>
+		<section>
+			<h1 th:text="${mensaje}"></h1>
+
+			<form th:action="@{/AgregarEstiloCVReal}" method="POST" th:object="${obj_banda}">
+				<input type="hidden" th:field="*{id}" readonly />
+
+
+				<input type="text" th:field="*{nombre}" required hidden>
+				<input type="number" th:field="*{numIntegrantes}" min="1" required hidden>
+
+
+				<div class="campo">
+					<label>Estilo musical:</label>
+					<input type="text" name="nuevoEstilo" required>
+				</div>
+
+				<input type="submit" value="Insertar estilo">
+				
+				<input type="text" th:field="*{pais.id}" required hidden>
+
+			</form>
+		</section>
+	</main>
+
+	<footer th:include="plantillas.html::pie"></footer>
+</body>
+
+</html>

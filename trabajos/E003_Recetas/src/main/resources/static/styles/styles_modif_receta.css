@@ -1,0 +1,81 @@
+.modificar-section {
+    max-width: 600px;
+    margin: auto;
+    padding: 40px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.modificar-section h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--colorPrincipal);
+    font-size: 28px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #444;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--colorPrincipal);
+    box-shadow: 0 0 8px rgba(188,71,73,0.25);
+}
+
+.botones {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.botones button {
+    background: var(--colorPrincipal);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.botones button:hover {
+    background: var(--colorPrincipalOscuro);
+    transform: translateY(-2px);
+}
+
+.btn-cancelar {
+    display: flex;
+    align-items: center;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    background: #ddd;
+    color: #333;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn-cancelar:hover {
+    background: #bbb;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Disco Stu</title>
+	<link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+
+	<header th:include="plantillas.html::cabecera"></header>
+
+	<nav th:include="plantillas.html::menu"></nav>
+
+	<main>
+		<section>
+			<h1 th:text="${mensaje}"></h1>
+			<!-- th:each la lista qe tiene qe coger    th:text ira el texto -->
+			<!-- <p th:each="elem : ${listaPaises}" th:text="${elem.nombre}"></p> <br> -->
+			<!-- <p th:each="elem : ${listaBandas}" th:text="${elem.nombre}"></p> <br> -->
+			<!-- <p th:each="elem : ${listaEstilos}" th:text="${elem.nombre}"></p> <br> -->
+
+
+			<!-- EDITAR -->
+			<form th:action="@{/AgregarBanda}" method="POST" th:object="${obj_banda}">
+				<div class="campo">
+				        <label>Nombre de la banda:</label>
+				        <input type="text" th:field="*{nombre}" required placeholder="Extremoduro">
+				    </div>
+
+				    <div class="campo">
+				        <label>Número de integrantes:</label>
+				        <input type="number" th:field="*{numIntegrantes}" min="1" required placeholder="1">
+				    </div>
+
+				    <div class="campo">
+				        <label for="estilo_id">Estilo musical:</label>
+				        <select th:field="*{estilo.id}" required>
+				            <option th:each="elem : ${listaEstilos}"
+				                    th:value="${elem.id}"
+				                    th:text="${elem.nombre}">
+				            </option>
+				        </select>
+						<br>
+						<input type="submit" value="Agregar estilo" th:formaction="@{/AgregarEstiloCV}">
+				    </div>
+
+				    <div class="campo">
+				        <label for="pais_id">País de origen:</label>
+				        <select th:field="*{pais.id}" required>
+				            <option th:each="elem : ${listaPaises}"
+				                    th:value="${elem.id}"
+				                    th:text="${elem.nombre}">
+				            </option>
+				        </select>
+						<br>
+						<input type="submit" value="Agregar país" th:formaction="@{/AgregarPaisCV}">
+				    </div>
+
+					<input type="text" name="origen" value="home" hidden required>
+				    <input type="submit" value="Insertar Banda">
+			</form>
+
+
+
+			<!-- BORRAR -->
+			<table border="1">
+				<thead>
+					<tr>
+						<th>Nombre</th>
+						<th>Nº Integrantes</th>
+						<th>Estilo</th>
+						<th>País</th>
+						<th>Acciones</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="elem : ${listaBandas}">
+						<td th:text="${elem.nombre}"></td>
+						<td th:text="${elem.numIntegrantes}"></td>
+						<td th:text="${elem.estilo.nombre}"></td>
+						<td th:text="${elem.pais.nombre}"></td>
+						<td>
+							<a th:href="@{/ModificarBanda(id=${elem.id})}">
+								<button>Editar</button>
+							</a>
+							<a th:href="@{/BorrarBanda(id=${elem.id})}"
+								onclick="return confirm('¿Seguro que quieres borrar esta banda?')">
+								<button>Borrar</button>
+							</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+
+		</section>
+	</main>
+
+	<footer th:include="plantillas.html::pie"></footer>
+</body>
+
+</html>

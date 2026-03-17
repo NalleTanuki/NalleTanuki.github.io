@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Raíces & Recetas</title>
+	<link rel="stylesheet" th:href="@{/styles/styles.css}">
+</head>
+
+<body>
+	<header>
+		<div id="cabecera_izq">
+			<img th:src="@{/imagenes/logo.png}" height="96px" width="96px">
+		</div>
+
+		<div id="cabecera_cen">
+			<h1>Raíces & Recetas</h1>
+			<h2>Recetas del Mundo</h2>
+		</div>
+
+		<div id="cabecera_der">
+			<img th:src="@{imagenes/facebook.png}" height="48px" width="48px">
+			<img th:src="@{imagenes/instagram.png}" height="48px" width="48px">
+		</div>
+	</header>
+
+	<nav th:include="plantillas.html::menu"></nav>
+
+	<main>
+		<section>
+			<h3>Recetas</h3>
+			
+<!--			BUSCADOR-->
+			<form th:action="@{/buscar}" method="get" >
+			    <input type="text" name="texto" placeholder="Buscar por ingrediente..." required>
+			    <button type="submit">Buscar</button>
+				
+				<a th:href="@{/lista}" class="btn-secundario">Ver todas</a>
+			</form>
+
+			<table>
+				<thead>
+					<tr>
+						<th>Nombre</th>
+						<th>Tiempo</th>
+						<th>Dificultad</th>
+						<th>País</th>
+					</tr>
+				</thead>
+
+				<tbody>
+
+					<tr th:each="elem : ${listaRecetas}">
+						<td th:text="${elem.nombre}"></td>
+						<td th:text="${elem.tiempo}"></td>
+						<td th:text="${elem.dificultad.nombre}"></td>
+						<td th:text="${elem.pais.nombre}"></td>
+					</tr>
+
+				</tbody>
+			</table>
+		</section>
+	</main>
+
+	<footer>
+		el pie de la pagina
+
+		<a href="">hola</a>
+		<a href="">adios</a>
+	</footer>
+</body>
+
+</html>

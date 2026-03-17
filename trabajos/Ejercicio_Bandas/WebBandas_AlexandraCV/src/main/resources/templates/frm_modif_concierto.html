@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Disco Stu</title>
+	<link rel="stylesheet" href="styles/styles.css">
+	
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+</head>
+
+<body>
+
+	<header th:include="plantillas.html::cabecera"></header>
+
+	<nav th:include="plantillas.html::menu"></nav>
+
+	<main>
+		<section>
+			<h1 th:text="${mensaje}"></h1>
+
+			<form th:action="@{/ModificarConcierto}" method="POST" th:object="${obj_concierto}">
+				<input type="hidden" th:field="*{id}" readonly />
+
+				<div class="campo">
+					<label>Fecha:</label>
+					<input type="date" th:field="*{fecha}" required>
+				</div>
+
+				<div class="campo">
+					<label>Hora:</label>
+					<input type="time" th:field="*{hora}" required>
+				</div>
+
+				<div class="campo">
+					<label>Precio:</label>
+					<input type="number" th:field="*{precio}" min="1" step="0.01" required>
+				</div>
+
+				<div class="campo">
+					<label for="banda_id">Bandas:</label>
+					<select th:field="*{listaBandas}" id="bandasSelect" multiple>
+						<option th:each="elem : ${listaBandas}" th:value="${elem.id}" th:text="${elem.nombre}"></option>
+					</select>
+<!--					<input type="submit" value="Agregar banda" th:formaction="@{/AgregarBandaCV}">-->
+				</div>
+
+				<div class="campo">
+					<label>País:</label>
+					<select th:field="*{pais.id}" required>
+						<option th:each="elem : ${listaPaises}" th:value="${elem.id}" th:text="${elem.nombre}">
+						</option>
+					</select>
+<!--					<br>-->
+<!--					<input type="submit" value="Agregar país" th:formaction="@{/AgregarPaisCV}">-->
+				</div>
+
+
+				<input type="text" name="origen" value="frm_modif_concierto" hidden required>
+				<input type="submit" value="Modificar concierto">
+			</form>
+		</section>
+	</main>
+
+	<footer th:include="plantillas.html::pie"></footer>
+	
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+	<script>
+	    $(document).ready(function() {
+	        $('#bandasSelect').select2({
+	            placeholder: "Selecciona bandas",
+	            width: '100%'
+	        });
+	    });
+	</script>
+	
+</body>
+
+</html>

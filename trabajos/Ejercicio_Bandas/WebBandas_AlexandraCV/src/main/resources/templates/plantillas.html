@@ -1,0 +1,39 @@
+<header th:fragment="cabecera">
+	        <div id="cabecera_izq">
+	            <img src="imagenes/logo.png" height="96px" width="96px">
+	        </div>
+
+	        <div id="cabecera_cen">
+	            <h1>Disco Stu</h1>
+	            <h2>Tu tienda de discos</h2>
+	        </div>
+
+	        <div id="cabecera_der">
+	            <img src="imagenes/facebook.png" height="48px" width="48px">
+	            <img src="imagenes/instagram.png" height="48px" width="48px">
+	        </div>
+	    </header>
+</header>
+
+<nav th:fragment="menu">
+        <ul>
+            <li>
+                <a th:href="@{/MenuBandas}">Bandas</a>
+            </li>
+            <li>
+                <a th:href="@{/MenuDiscos}">Discos</a>
+            </li>
+            <li>
+                <a th:href="@{/MenuConciertos}">Conciertos</a>
+            </li>
+        </ul>
+</nav>
+
+
+	
+<footer th:fragment="pie">
+        Disco Stu llega antes que tú!!
+
+        <a href="">hola</a>
+        <a href="">adiós</a>
+    </footer>	
