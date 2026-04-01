@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alexandra | Portfolio</title>
+  <title>Alexandra Valledor | Java & Spring Boot Developer</title>
   <link rel="stylesheet" href="css/estilos.css">
   <link rel="icon" href="image/favicon/favicon.ico" type="image/x-icon">
 
@@ -14,9 +14,9 @@
     rel="stylesheet">
 
   <meta name="description"
-    content="Portfolio de Alexandra Valledor - Programadora y Diseñadora Gráfica. Proyectos web, diseño, frontend, backend y más.">
+    content="Desarrolladora web junior especializada en backend con Java y Spring Boot. Creación de APIs REST, autenticación con JWT y aplicaciones conectadas a bases de datos. Portafolio con proyectos reales.">
   <meta name="keywords"
-    content="portfolio, Alexandra Valledor, diseño gráfico, desarrollo web, programadora, frontend, backend">
+    content="Java, Spring Boot, backend, desarrolladora web junior, API Rest, JWT, MySQL, portfolio programadora, fullstack junior">
   <meta name="author" content="Alexandra Valledor">
 
 </head>
@@ -25,29 +25,35 @@
 
   <!-- CONTROLES SUPERIORES -->
   <div class="top-controls">
-    <!-- Boton toggle -->
+    <!-- IDIOMAs -->
+    <div id="idiomaContenedor" aria-label="Seleccionar idioma">
+      <button id="btnES" class="idioma-btn" aria-label="Cambiar a español">
+        <img src="image/spain.png" alt="Español">
+      </button>
+
+      <button id="btnEN" class="idioma-btn" aria-label="Switch to English">
+        <img src="image/united-kingdom.png" alt="English">
+      </button>
+    </div>
+
+    <!-- Toggle tema -->
     <div class="toggle-theme" id="toggleTheme" role="button" tabindex="0" aria-label="Cambiar tema">
       <span class="icon-sun">☀️</span>
       <div class="switch"></div>
       <span class="icon-moon">🌙</span>
     </div>
 
-    <!-- Selector idioma -->
-    <div id="idiomaContenedor">
-      <button id="btnES" class="idioma-btn">
-        <img src="image/spain.png" alt="Español">
-      </button>
-      <button id="btnEN" class="idioma-btn">
-        <img src="image/united-kingdom.png" alt="English">
-      </button>
-    </div>
   </div>
+      
 
   <header class="header">
     <div class="container">
-      <h1 id="tituloPrincipal"><span class="resaltado">alexandra valledor</span><br>programadora & diseñadora gráfica
+      <h1 id="tituloPrincipal"><span class="resaltado">Alexandra Valledor</span><br>
+        Java & Spring Boot Developer
       </h1>
-      <p class="descripcion" id="subtitulo">creatividad + código = magia digital</p>
+      <p class="descripcion" id="subtitulo">
+        Backend con Java & Spring Boot · APIs REST · Seguridad · Bases de datos
+      </p>
       <nav>
         <ul>
           <li><a href="#sobreMi" id="menuSobreMi">/sobre mí</a></li>
@@ -64,48 +70,103 @@
     <div class="container">
       <h2 id="tituloSobreMi">Sobre mí</h2>
       <p id="textoSobreMi">
-        Soy una apasionada de la programación y el diseño gráfico. Me encanta crear experiencias digitales que combinen
-        estética y funcionalidad. Siempre busco aprender nuevas tecnologías y mejorar mis habilidades.
+        Desarrolladora backend con Java y Spring Boot, enfocada en la creación de APIs REST segyras y escalables.
+        He desarrollado APIs REST completas con autenticación mediante JWT, gestión de usuarios y conexión a bases de datos relacionales.
+      </p>
+
+      <p>
+        Me enfoco en crear aplicaciones funcionales, bien estructuradas y seguras, aplicando buenas prácticas de desarrollo.
+      </p>
+
+      <p>
+        También tengo experiencia en frontend (HTML, CSS y JavaScript), lo que me permite desarrollar aplicaciones completas y entender todo el flujo de una aplicación web.
+      </p>
+
+      <p>
+        Actualmente sigo formándome en arquitectura backend y mejores prácticas en desarrollo de software.
       </p>
     </div>
   </section>
 
+   <!-- PROYECTOS-->
   <section id="proyectos" class="proyectos">
-    <h2 id="tituloProyectos">Proyectos destacados</h2>
+    <div class="container">
+          <h2 id="tituloProyectos">Proyectos destacados</h2>
     <div class="grid">
+
       <div class="card">
-        <h3 id="proyecto1Titulo">🛒 Tienda Online (DWES)</h3>
-        <p id="proyecto1Texto">Carrito, login y conexión a BD con PHP.</p>
+        <h3 id="proyecto1Titulo">🚗 API REST - Gestión de vehículos</h3>
+
+        <p id="proyecto1Texto">
+          API REST desarrollada con Spring Boot con autenticación y autorización mediante JWT y gestión de sesiones, incluyendo control de acceso, validación de datos, manejo de errores personalizados y persistencia en base de datos. Implementada siguiendo arquitectura por capas y buenas prácticas de desarrollo.
+        </p>
+
+        <p class="tech">
+          Java · Spring Boot · MySQL · REST API · JWT · Thymeleaf
+        </p>
+
+        <a href="" target="_blank">Ver código</a>
+      </div>
+
+      <div class="card">
+        <h3 id="proyecto2Titulo">📚 Gamiko - Aplicación para Alumnos de la ESO</h3>
+
+        <p id="proyecto2Texto">
+          Aplicación web orientada a alumnos y profesores de la ESO que permite gestionar tareas, controlar el tiempo de estudio y realizar test interactivos.
+          Incluye sistema de autenticación de usuarios, validación de formularios y gestión de archivos (subida y descarga).
+        </p>
+
+        <p class="tech">
+          PHP · MySQL · HTML · CSS · JavaScript · CRUD · Autenticación
+        </p>
+
+        <a href="https://github.com/NalleTanuki/NalleTanuki.github.io/tree/main/trabajos/0_GAMIKO_App" target="_blank">Ver código</a>
+      </div>
+
+
+      <div class="card">
+        <h3 id="proyecto3Titulo">🛒 Tienda Online</h3>
+
+        <p id="proyecto3Texto">
+          Aplicación web con sistema de autenticación, gestión de usuarios y carrito de compra, conectada a base de datos para persistencia de productos y pedidos.
+        </p>
+
+        <p class="tech">
+          PHP · MySQL · HTML · CSS · JavaScript
+        </p>
+
         <a href="https://github.com/NalleTanuki/NalleTanuki.github.io/tree/main/trabajos/2.2_DWES_act2" target="_blank"
-          rel="noopener noreferrer">Ver proyecto</a>
+          rel="noopener noreferrer">Ver código</a>
       </div>
+      
       <div class="card">
-        <h3 id="proyecto2Titulo">📇 Agenda de Contactos (DWES)</h3>
-        <p id="proyecto2Texto">App con autenticación y gestión de contactos.</p>
+        <h3 id="proyecto4Titulo">📇 Agenda de Contactos</h3>
+
+        <p id="proyecto4Texto">
+          Aplicación web con autenticación de usuarios y gestión completa de contactos, incluyendo operaciones CRUD y almacenamiento en base de datos.
+        </p>
+
+        <p class="tech">
+          PHP · MySQL · CRUD · Autenticación
+        </p>
+
         <a href="https://github.com/NalleTanuki/NalleTanuki.github.io/tree/main/trabajos/2.2_DWES_act1" target="_blank"
-          rel="noopener noreferrer">Ver proyecto</a>
+          rel="noopener noreferrer">Ver código</a>
       </div>
+     
       <div class="card">
-        <h3 id="proyecto3Titulo">🔗 SOAP Service (DWES)</h3>
-        <p id="proyecto3Texto">Servicio web SOAP con NuSOAP y XML estructurado.</p>
-        <a href="https://github.com/NalleTanuki/NalleTanuki.github.io/tree/main/trabajos/2.3_DWES_SOAP.Service"
-          target="_blank" rel="noopener noreferrer">Ver proyecto</a>
-      </div>
-      <div class="card">
-        <h3 id="proyecto4Titulo">💄 Web ZARA (Lenguaje de Marcas)</h3>
-        <p id="proyecto4Texto">Diseño estático con HTML y CSS.</p>
-        <a href="trabajos/1.1_LM_ZARA/html/index.html" target="_blank" rel="noopener noreferrer">Ver proyecto</a>
-      </div>
-      <div class="card">
-        <h3 id="proyecto5Titulo">🎬 Películas (DWEC)</h3>
-        <p id="proyecto5Texto">JavaScript + DOM para mostrar películas dinámicamente.</p>
-        <a href="trabajos/2.1_DWEC_act1_2/ejercicio2.html" target="_blank" rel="noopener noreferrer">Ver proyecto</a>
-      </div>
-      <div class="card">
-        <h3 id="proyecto6Titulo">👥 Empleados (DWES)</h3>
-        <p id="proyecto6Texto">Formulario con validación y MySQL.</p>
+        <h3 id="proyecto5Titulo">👥 Gestión de Empleados</h3>
+
+        <p id="proyecto5Texto">
+          Sistema de gestión de empleados con validación de formularios y persistencia en base de datos MySQL.
+        </p>
+
+        <p class="tech">
+          PHP · MySQL · CRUD · Validación
+        </p>
+
         <a href="https://github.com/NalleTanuki/NalleTanuki.github.io/tree/main/trabajos/2.1_DWES_act2" target="_blank"
-          rel="noopener noreferrer">Ver proyecto</a>
+          rel="noopener noreferrer">Ver código</a>
       </div>
     </div>
   </section>
@@ -113,13 +174,13 @@
   <section id="contacto" class="contacto">
     <h2 id="tituloContacto">¿Trabajamos junt@s?</h2>
     <p id="textoContacto">
-      Puedes escribirme a <a href="mailto:alexandravalledor@gmail.com">alexandravalledor@gmail.com</a> o contactarme por
-      <a href="https://github.com/NalleTanuki" target="_blank" rel="noopener noreferrer">GitHub</a>.
+      Puedes contactarme a través de mi <a href="https://www.linkedin.com/in/alexandravalledor/" target="_blank">Linkedin</a> o por
+      <a href="https://github.com/NalleTanuki/NalleTanuki.github.io/tree/main/trabajos" target="_blank" rel="noopener noreferrer">GitHub</a>.
     </p>
   </section>
 
   <footer>
-    <p>© 2025 Alexandra | Portfolio</p>
+    <p>© 2026 Alexandra Valledor | Portfolio</p>
   </footer>
 
   <canvas id="fondoAnimado"></canvas>

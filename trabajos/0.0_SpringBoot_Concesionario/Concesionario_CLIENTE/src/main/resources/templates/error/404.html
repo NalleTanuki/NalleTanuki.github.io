@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ERROR 404 - Concesionario Caster</title>
+	<link rel="stylesheet" href="styles/styles.css">
+	<link rel="stylesheet" href="styles/error.css">
+
+	<!--	<script src="js/hashearPass.js"></script>-->
+</head>
+
+<body>
+	<header th:include="plantillas/plantillas.html::cabecera"></header>
+
+
+	<main class="error-container">
+		
+		<h1 class="error-codigo">ERROR 404</h1>
+		<h2 class="error-titulo">Página no encontrada.</h2>
+		
+		<br>
+		
+<!--		Mensaje generico-->
+		<p class="error-mensaje" th:if="${mensaje}" th:text="${mensaje}"></p>
+		
+		
+<!--		Mensaje x defecto      -->
+	<p class="error-mensaje" th:unless="${mensaje}">
+		La página que buscas no existe o no tienes acceso a ella.
+	</p>
+	
+	<br>
+	
+	<a href="/login" class="btn-volver">Ir a login</a>
+		
+	</main>
+
+	<footer th:include="plantillas/plantillas.html::pie"></footer>
+</body>
+
+</html>

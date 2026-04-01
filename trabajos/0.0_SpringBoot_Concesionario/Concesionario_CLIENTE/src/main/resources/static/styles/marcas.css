@@ -1,0 +1,139 @@
+/* CONTENEDOR */
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+}
+
+/* TITULOS */
+main h1 {
+	margin-bottom: 20px;
+	color: var(--colorPrincipal);
+}
+
+main h2 {
+	margin: 20px 0 10px 0;
+	color: var(--colorPrincipalOscuro);
+}
+
+/* FORM */
+form {
+	background-color: white;
+	padding: 20px;
+	border-radius: 10px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	align-items: center;
+
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* GRUPO */
+.form-group {
+	width: 300px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+/* LABEL */
+.form-group label {
+	margin-bottom: 5px;
+	font-weight: bold;
+	color: var(--colorPrincipal);
+}
+
+/* INPUT */
+.form-group input {
+	width: 100%;
+	padding: 8px;
+	border-radius: 6px;
+	border: 1px solid #ccc;
+}
+
+/* 👇 ESTO TE FALTABA */
+form input,
+form select {
+	width: 300px;
+	max-width: 300px;
+
+	padding: 8px;
+	border-radius: 6px;
+	border: 1px solid #ccc;
+}
+
+/* BOTÓN */
+form button {
+	margin-top: 20px;
+	align-self: center;
+
+	background-color: var(--colorPrincipal);
+	color: white;
+
+	padding: 10px 20px;
+	border: none;
+	border-radius: 6px;
+
+	font-weight: bold;
+	cursor: pointer;
+}
+
+form button:hover {
+	background-color: var(--colorContraste);
+	color: black;
+}
+
+/* SEPARADOR */
+hr {
+	margin: 30px 0;
+	border: none;
+	height: 2px;
+	background-color: var(--colorPrincipalClaro);
+}
+
+/* TABLA */
+table {
+	width: 100%;
+	border-collapse: collapse;
+	background-color: white;
+
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* CABECERA */
+table thead {
+	background-color: var(--colorPrincipal);
+	color: white;
+}
+
+table th,
+table td {
+	padding: 10px;
+	text-align: center;
+}
+
+/* FILAS */
+table tbody tr:nth-child(even) {
+	background-color: var(--fondoClaro);
+}
+
+table tbody tr:hover {
+	background-color: var(--colorContrasteClaro);
+}
+
+/* LINKS */
+table a {
+	text-decoration: none;
+	font-weight: bold;
+	margin: 0 5px;
+}
+
+table a[href*="Modificar"] {
+	color: var(--colorPrincipal);
+}
+
+table a[href*="Eliminar"] {
+	color: red;
+}

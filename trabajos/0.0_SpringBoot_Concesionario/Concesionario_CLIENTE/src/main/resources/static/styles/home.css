@@ -1,0 +1,220 @@
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+}
+
+/* TITULOS */
+main h1 {
+	margin-bottom: 20px;
+	color: var(--colorPrincipal);
+}
+
+main h2 {
+	margin: 20px 0 10px 0;
+	color: var(--colorPrincipalOscuro);
+}
+
+/* FORM */
+form {
+	background-color: white;
+	padding: 20px;
+	border-radius: 10px;
+
+	display: flex;
+	flex-direction: column;
+	/*	flex-wrap: wrap;*/
+	gap: 20px;
+	align-items: center;
+
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+.form-group {
+	width: 300px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.form-group label {
+	margin-bottom: 5px;
+	font-weight: bold;
+	color: var(--colorPrincipal);
+}
+
+
+.form-group input,
+.form-group select {
+	width: 100%;
+	padding: 8px;
+	border-radius: 6px;
+	border: 1px solid #ccc;
+}
+
+
+/* CAMPOS */
+form label {
+	width: 100%;
+	font-weight: bold;
+	color: var(--colorPrincipal);
+
+	text-align: center;
+}
+
+form input,
+form select {
+	width: 300px;
+	max-width: 300px;
+
+	padding: 8px;
+	border-radius: 6px;
+	border: 1px solid #ccc;
+}
+
+/* BOTÓN */
+form button {
+	margin-top: 20px;
+	align-self: center;
+
+	background-color: var(--colorPrincipal);
+	color: white;
+
+	padding: 10px 20px;
+	border: none;
+	border-radius: 6px;
+
+	font-weight: bold;
+	cursor: pointer;
+}
+
+form button:hover {
+	background-color: var(--colorContraste);
+	color: black;
+}
+
+/* SEPARADOR */
+hr {
+	margin: 30px 0;
+	border: none;
+	height: 2px;
+	background-color: var(--colorPrincipalClaro);
+}
+
+/* TABLA */
+table {
+	width: 100%;
+	border-collapse: collapse;
+	background-color: white;
+
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* CABECERA TABLA */
+table thead {
+	background-color: var(--colorPrincipal);
+	color: white;
+}
+
+table th,
+table td {
+	padding: 10px;
+	text-align: center;
+}
+
+/* FILAS */
+table tbody tr:nth-child(even) {
+	background-color: var(--fondoClaro);
+}
+
+table tbody tr:hover {
+	background-color: var(--colorContrasteClaro);
+}
+
+/* ACCIONES */
+table a {
+	text-decoration: none;
+	font-weight: bold;
+	margin: 0 5px;
+}
+
+/* MODIFICAR */
+table a[href*="Modificar"] {
+	color: var(--colorPrincipal);
+}
+
+/* ELIMINAR */
+table a[href*="Eliminar"] {
+	color: red;
+}
+
+
+
+
+/* BUSCADOR */
+.buscador {
+	width: 100%;
+
+	display: flex;
+	align-items: center;
+	gap: 10px;
+
+	background-color: white;
+	padding: 10px 15px;
+	border-radius: 8px;
+
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+	box-sizing: border-box;
+	margin-bottom: 20px;
+}
+
+
+.buscador input {
+	flex: 1;
+	/* ocupa todo el espacio */
+	padding: 10px;
+	border-radius: 6px;
+	border: 1px solid #ccc;
+	font-size: 14px;
+}
+
+.buscador inout:focus{
+	outline: none;
+	border-color: var(--colorPrincipal);
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.buscador button {
+	background-color: var(--colorPrincipal);
+	color: white;
+
+	padding: 10px 16px;
+	border: none;
+	border-radius: 6px;
+
+	font-weight: bold;
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+.buscador button:hover {
+	background-color: var(--colorContraste);
+	color: black;
+}
+
+
+.buscador .btn-limpiar {
+	padding: 10px 16px;
+	border-radius: 6px;
+	background-color: #ddd;
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+.buscador .btn-limpiar:hover {
+	background-color: #bbb;
+}

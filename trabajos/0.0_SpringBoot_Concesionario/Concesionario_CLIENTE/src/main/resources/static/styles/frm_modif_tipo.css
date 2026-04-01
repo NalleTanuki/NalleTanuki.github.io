@@ -1,0 +1,83 @@
+/* CENTRAR CONTENIDO */
+main {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	padding-top: 40px;
+}
+
+/* TARJETA */
+section {
+	background-color: var(--fondoClaro);
+	padding: 30px;
+	border-radius: 12px;
+	width: 100%;
+	max-width: 600px;
+
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* TITULO */
+section h2 {
+	text-align: center;
+	color: var(--colorPrincipal);
+	margin-bottom: 20px;
+}
+
+/* FORM */
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	gap: 20px;
+}
+
+/* GRUPO DE CAMPOS */
+.form-group {
+	width: 100%;
+}
+
+/* LABEL */
+.form-group label {
+	margin-bottom: 5px;
+	font-weight: bold;
+	color: var(--colorPrincipal);
+}
+
+/* INPUTS */
+.form-group input,
+.form-group select {
+	width: 100%;
+	padding: 8px;
+	border-radius: 6px;
+	border: 1px solid #ccc;
+	font-size: 15px;
+}
+
+/* FOCUS */
+.form-group input:focus,
+.form-group select:focus {
+	outline: none;
+	border-color: var(--colorContraste);
+	box-shadow: 0 0 5px var(--colorContrasteClaro);
+}
+
+/* BTN */
+form button {
+	margin-top: 10px;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 6px;
+
+	background-color: var(--colorPrincipal);
+	color: white;
+
+	font-weight: bold;
+	cursor: pointer;
+}
+
+/* HOVER */
+form button:hover {
+	background-color: var(--colorContraste);
+	color: black;
+}

@@ -1,50 +1,65 @@
 {
   "es": {
-    "tituloPrincipal": "<span class='resaltado'>alexandra valledor</span><br>programadora & diseñadora gráfica",
-    "subtitulo": "creatividad + código = magia digital",
+    "tituloPrincipal": "<span class='resaltado'>Alexandra Valledor</span><br>Java & Spring Developer",
+    "subtitulo": "Backend con Java & Spring Boot · APIs REST · Seguridad · Bases de datos",
+    
     "menuSobreMi": "/sobre mí",
     "menuProyectos": "/proyectos",
     "menuContacto": "/contacto",
-    "tituloSobreMi": "Sobre mí",
-    "textoSobreMi": "Soy una apasionada de la programación y el diseño gráfico. Me encanta crear experiencias digitales que combinen estética y funcionalidad. Siempre busco aprender nuevas tecnologías y mejorar mis habilidades.",
+
+     "tituloSobreMi": "Sobre mí",
+    "textoSobreMi": "Desarrolladora backend con Java y Spring Boot, enfocada en la creación de APIs REST seguras y escalables. He desarrollado APIs REST completas con autenticación mediante JWT, gestión de usuarios y conexión a bases de datos relacionales. Me enfoco en crear aplicaciones funcionales, bien estructuradas y seguras, aplicando buenas prácticas de desarrollo. También tengo experiencia en frontend (HTML, CSS y JavaScript), lo que me permite desarrollar aplicaciones completas y entender todo el flujo de una aplicación web. Actualmente sigo formándome en arquitectura backend y mejores prácticas en desarrollo de software.",
+    
     "tituloProyectos": "Proyectos destacados",
-    "proyecto1Titulo": "🛒 Tienda Online (DWES)",
-    "proyecto1Texto": "Carrito, login y conexión a BD con PHP.",
-    "proyecto2Titulo": "📇 Agenda de Contactos (DWES)",
-    "proyecto2Texto": "App con autenticación y gestión de contactos.",
-    "proyecto3Titulo": "🔗 SOAP Service (DWES)",
-    "proyecto3Texto": "Servicio web SOAP con NuSOAP y XML estructurado.",
-    "proyecto4Titulo": "💄 Web ZARA (Lenguaje de Marcas)",
-    "proyecto4Texto": "Diseño estático con HTML y CSS.",
-    "proyecto5Titulo": "🎬 Películas (DWEC)",
-    "proyecto5Texto": "JavaScript + DOM para mostrar películas dinámicamente.",
-    "proyecto6Titulo": "👥 Empleados (DWES)",
-    "proyecto6Texto": "Formulario con validación y MySQL.",
+
+    "proyecto1Titulo": "🚗 API REST - Gestión de vehículos",
+    "proyecto1Texto": "API REST desarrollada con Spring Boot con autenticación y autorización mediante JWT y gestión de sesiones, incluyendo control de acceso, validación de datos, manejo de errores personalizados y persistencia en base de datos. Implementada siguiendo arquitectura por capas y buenas prácticas de desarrollo.",
+
+    "proyecto2Titulo": "📚 Gamiko - Aplicación para Alumnos de la ESO",
+    "proyecto2Texto": "Aplicación web orientada a alumnos y profesores de la ESO que permite gestionar tareas, controlar el tiempo de estudio y realizar test interactivos. Incluye sistema de autenticación de usuarios, validación de formularios y gestión de archivos (subida y descarga).",
+
+    "proyecto3Titulo": "🛒 Tienda Online",
+    "proyecto3Texto": "Aplicación web con sistema de autenticación, gestión de usuarios y carrito de compra, conectada a base de datos para persistencia de productos y pedidos.",
+
+    "proyecto4Titulo": "📇 Agenda de Contactos",
+    "proyecto4Texto": "Aplicación web con autenticación de usuarios y gestión completa de contactos, incluyendo operaciones CRUD y almacenamiento en base de datos.",
+
+    "proyecto5Titulo": "👥 Gestión de empleados",
+    "proyecto5Texto": "Sistema de gestión de empleados con validación de formularios y persistencia en base de datos MySQL.",
+
     "tituloContacto": "¿Trabajamos junt@s?",
-    "textoContacto": "Puedes escribirme a <a href=\"mailto:alexandravalledor@gmail.com\">alexandravalledor@gmail.com</a> o contactarme por <a href=\"https://github.com/NalleTanuki\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>."
+    "textoContacto": "Puedes contactarme a través de mi <a href=\"https://www.linkedin.com/in/alexandravalledor/\" target=\"_blank\">LinkedIn</a> o ver más proyectos en <a href=\"https://github.com/NalleTanuki/NalleTanuki.github.io/tree/main/trabajos\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>."
   },
+
   "en": {
-    "tituloPrincipal": "<span class='resaltado'>alexandra valledor</span><br>programmer & graphic designer",
-    "subtitulo": "creativity + code = digital magic",
+    "tituloPrincipal": "<span class='resaltado'>Alexandra Valledor</span><br>Java & Spring Developer",
+    "subtitulo": "Backend with Java & Spring Boot · REST APIs · Security · Databases",
+
     "menuSobreMi": "/about me",
     "menuProyectos": "/projects",
     "menuContacto": "/contact",
+
     "tituloSobreMi": "About Me",
-    "textoSobreMi": "I am passionate about programming and graphic design. I love creating digital experiences that combine aesthetics and functionality. I am always eager to learn new technologies and improve my skills.",
+    "textoSobreMi": "Backend developer specialized in Java and Spring Boot, focused on building secure and scalable REST APIs. I have developed complete APIs with JWT authentication, user management and relational database integration. I focus on creating functional, well-structured and secure applications following best development practices. I also have frontend experience (HTML, CSS and JavaScript), which allows me to build fullstack applications and understand the complete workflow of a web application. I am currently continuing to improve my skills in backend architecture and software development best practices.",
+
     "tituloProyectos": "Featured Projects",
-    "proyecto1Titulo": "🛒 Online Store (DWES)",
-    "proyecto1Texto": "Shopping cart, login and DB connection with PHP.",
-    "proyecto2Titulo": "📇 Contacts Agenda (DWES)",
-    "proyecto2Texto": "App with authentication and contact management.",
-    "proyecto3Titulo": "🔗 SOAP Service (DWES)",
-    "proyecto3Texto": "SOAP web service with NuSOAP and structured XML.",
-    "proyecto4Titulo": "💄 ZARA Web (Markup Language)",
-    "proyecto4Texto": "Static design with HTML and CSS.",
-    "proyecto5Titulo": "🎬 Movies (DWEC)",
-    "proyecto5Texto": "JavaScript + DOM to display movies dynamically.",
-    "proyecto6Titulo": "👥 Employees (DWES)",
-    "proyecto6Texto": "Form with validation and MySQL.",
-    "tituloContacto": "Shall we work together?",
-    "textoContacto": "You can write to me at <a href=\"mailto:alexandravalledor@gmail.com\">alexandravalledor@gmail.com</a> or contact me via <a href=\"https://github.com/NalleTanuki\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>."
-  }
+
+    "proyecto1Titulo": "🚗 REST API - Vehicle Management",
+    "proyecto1Texto": "REST API developed with Spring Boot featuring authentication and authorization using JWT and session management, including access control, data validation, custom error handling and database persistence. Built following layered architecture and best development practices.",
+
+    "proyecto2Titulo": "📚 Gamiko – Educational Platform for Secondary School Students",
+    "proyecto2Texto": "Web application designed for students and teachers in secondary education, allowing task management, study time tracking and interactive quizzes. Includes user authentication system, form validation and file management (upload and download)."
+
+    "proyecto3Titulo": "🛒 Online Store",
+    "proyecto3Texto": "Web application with user authentication system, user management and shopping cart functionality, connected to a database for product and order persistence.",
+
+    "proyecto4Titulo": "📇 Contact Manager",
+    "proyecto4Texto": "Web application with user authentication and full contact management, including CRUD operations and database storage.",
+
+    "proyecto5Titulo": "👥 Employee Management",
+    "proyecto5Texto": "Employee management system with form validation and MySQL database persistence.",
+
+    "tituloContacto": "Let's work together",
+    "textoContacto": "You can contact me via <a href=\"https://www.linkedin.com/in/alexandravalledor/\" target=\"_blank\">LinkedIn</a> or check my projects on <a href=\"https://github.com/NalleTanuki\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>."
+ }
 }

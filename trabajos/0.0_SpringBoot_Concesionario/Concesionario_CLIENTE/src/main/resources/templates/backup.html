@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Concesionario Caster</title>
+	<link rel="stylesheet" href="styles/styles.css">
+	<link rel="stylesheet" href="styles/backup.css">
+<!--	<script src="js/hashearPass.js"></script>-->
+</head>
+
+<body>
+	<header th:include="plantillas/plantillas.html::cabecera"></header>
+
+	<nav th:include="plantillas/plantillas.html::menu"></nav>
+
+	<main>
+		<section>
+			<h2>Backup Base de Datos</h2>
+			
+			<form th:action="@{/BackupCSV}" method="get">
+				<button type="submit">Descargar copias de seguridad</button>
+				
+			</form>
+			
+		</section>
+	</main>
+
+	<footer th:include="plantillas/plantillas.html::pie"></footer>
+</body>
+
+</html>

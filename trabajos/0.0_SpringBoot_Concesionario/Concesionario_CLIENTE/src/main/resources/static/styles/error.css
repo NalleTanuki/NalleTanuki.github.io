@@ -1,0 +1,42 @@
+/* CONTENEDOR PRINCIPAL */
+.error-container {
+	text-align: center;
+	margin-top: 80px;
+	padding: 20px;
+}
+
+/* CODIGO DE ERROR */
+.error-codigo {
+	font-size: 80px;
+	color: #d9534f;
+	margin-bottom: 10px;
+}
+
+/* TITULO */
+.error-titulo {
+	font-size: 28px;
+	margin-bottom: 20px;
+	color: #333;
+}
+
+/* MENSAJE */
+.error-mensaje {
+	font-size: 18px;
+	color: #555;
+	margin-bottom: 30px;
+}
+
+/* BTON */
+.btn-volver {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #0275d8;
+	color: white;
+	text-decoration: none;
+	border-radius: 5px;
+	font-weight: bold;
+}
+
+.btn-volver:hover {
+	background-color: #025aa5;
+}

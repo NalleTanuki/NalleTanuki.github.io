@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Concesionario Caster</title>
+	<link rel="stylesheet" href="styles/styles.css">
+	<link rel="stylesheet" href="styles/frm_modif_vehiculo.css">
+	<!--	<script src="js/hashearPass.js"></script>-->
+</head>
+
+<body>
+	<header th:include="plantillas/plantillas.html::cabecera"></header>
+
+	<nav th:include="plantillas/plantillas.html::menu"></nav>
+
+	<main>
+		<section>
+
+			<h2>Modificar vehículo</h2> <br>
+
+			<form th:action="@{/ModificarVehiculo}" th:object="${obj_vehiculo}" method="post">
+				<input type="hidden" th:field="*{id}">
+
+				<div class="form-group">
+					<label>Marca:</label>
+					<select th:field="*{marca.id}" required>
+						<option th:each="m : ${marcas}" th:value="${m.id}" th:text="${m.nombre}">
+						</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label>Modelo:</label>
+					<input type="text" th:field="*{modelo}" required>
+				</div>
+
+
+				<div class="form-group">
+					<label>Matrícula:</label>
+					<input type="text"
+						   th:field="*{matricula}"
+						   maxlength="7"
+						   pattern="[0-9]{4}[B-DF-HJ-NP-TV-Z]{3}"
+						   style="text-transform: uppercase;"
+						   oninput="this.value = this.value.toUpperCase()"
+						  placeholder="1234ABC" required>
+				</div>
+
+				<div class="form-group">
+					<label>Tipo:</label>
+					<select th:field="*{tipo.id}" required>
+						<option th:each="t : ${tipos}" th:value="${t.id}" th:text="${t.nombre}">
+						</option>
+					</select>
+				</div>
+
+
+				<button type="submit">Guardar cambios</button>
+
+			</form>
+
+		</section>
+	</main>
+
+	<footer th:include="plantillas/plantillas.html::pie"></footer>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Concesionario Caster</title>
+	<link rel="stylesheet" href="styles/styles.css">
+	<link rel="stylesheet" href="styles/home.css">
+
+	<!--	<script src="js/hashearPass.js"></script>-->
+</head>
+
+<body>
+	<header th:include="plantillas/plantillas.html::cabecera"></header>
+
+	<nav th:include="plantillas/plantillas.html::menu"></nav>
+
+	<main>
+		<br>
+		<h1>Gestión de Vehículos</h1>
+
+		<!--		FORMULARIO INSERTAR		-->
+		<h2>Nuevo vehículo</h2>
+
+		<form th:action="@{/InsertarVehiculo}" method="post" th:object="${obj_vehiculo}">
+
+			<div class="form-group">
+				<label>Marca:</label>
+				<select th:field="*{marca.id}" required>
+					<option th:each="m : ${marcas}" th:value="${m.id}" th:text="${m.nombre}">
+					</option>
+				</select>
+			</div>
+
+
+			<div class="form-group">
+				<label>Modelo:</label>
+				<input type="text" th:field="*{modelo}" required>
+			</div>
+
+			<div class="form-group">
+				<label>Matrícula:</label>
+				<input type="text" th:field="*{matricula}" maxlength="7" pattern="[0-9]{4}[B-DF-HJ-NP-TV-Z]{3}"
+					style="text-transform: uppercase;" oninput="this.value = this.value.toUpperCase()"
+					placeholder="1234ABC" required>
+			</div>
+
+
+			<div class="form-group">
+				<label>Tipo:</label>
+				<select th:field="*{tipo.id}" required>
+					<option th:each="t : ${tipos}" th:value="${t.id}" th:text="${t.nombre}">
+					</option>
+				</select>
+				<br>
+			</div>
+
+
+			<button type="submit">Guardar</button>
+
+			<!--			ERROR-->
+			<div th:if="${error}" style="color:red;">
+				<p th:text="${error}"></p>
+			</div>
+		</form>
+
+		<hr>
+
+
+
+		<!--		TABLA MOSTRAR		-->
+
+		<h2>Listado de vehículos</h2>
+
+		<h3>Buscar por matrícula</h3>
+		
+		<br>
+
+		<form th:action="@{/buscarVehiculo}" method="get" class="buscador">
+			<input type="text" name="matricula" placeholder="1234ABC" required>
+
+			<div id="botones-buscar">
+				<button type="submit">Buscar</button>
+
+				<a href="/MenuVehiculos" class="btn-limpiar">Ver todos</a>
+			</div>
+
+		</form>
+
+
+		<table border="1">
+
+			<thead>
+				<tr>
+					<!--					<th>ID</th>-->
+					<th>Marca</th>
+					<th>Modelo</th>
+					<th>Matrícula</th>
+					<th>Tipo</th>
+					<th>Acciones</th>
+				</tr>
+			</thead>
+
+
+			<tbody>
+				<tr th:each="lv : ${listaVehiculos}">
+					<!--					<td th:text="${lv.id}"></td>-->
+					<td th:text="${lv.marca.nombre}"></td>
+					<td th:text="${lv.modelo}"></td>
+					<td th:text="${lv.matricula}"></td>
+					<td th:text="${lv.tipo.nombre}"></td>
+					<td>
+						<!--						MODIFICAR						-->
+						<a th:href="@{/ModificarVehiculo(id=${lv.id})}">
+							Modificar
+						</a>
+
+						<!--						ELIMINAR						-->
+						<a th:if="${esAdmin}" th:href="@{/EliminarVehiculo(id=${lv.id})}"
+							onclick="return confirm('¿Seguro que quieres eliminar este vehículo?')">
+							Eliminar
+						</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+	</main>
+
+	<footer th:include="plantillas/plantillas.html::pie"></footer>
+</body>
+
+</html>

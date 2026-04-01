@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Concesionario Caster</title>
+	<link rel="stylesheet" href="styles/styles.css">
+	<link rel="stylesheet" href="styles/tipos.css">
+
+	<!--	<script src="js/hashearPass.js"></script>-->
+</head>
+
+<body>
+	<header th:include="plantillas/plantillas.html::cabecera"></header>
+
+	<nav th:include="plantillas/plantillas.html::menu"></nav>
+
+	<main>
+		<br>
+		<h1>Gestión de Tipos de Vehículos</h1>
+
+		<!--		FORMULARIO INSERTAR		-->
+		<h2>Nuevo tipo</h2>
+
+		<form th:action="@{/InsertarTipo}" method="post" th:object="${obj_tipo}">
+
+			<div class="form-group">
+				<label>Nombre:</label>
+				<input type="text" th:field="*{nombre}" required>
+			</div>
+
+
+			<!--			ERROR-->
+			<div th:if="${error}" style="color:red;">
+				<p th:text="${error}"></p>
+			</div>
+
+			<button type="submit">Guardar</button>
+
+		</form>
+
+		<hr>
+
+
+		<!--		TABLA MOSTRAR		-->
+
+		<h2>Listado de tipos</h2>
+
+		<table border="1">
+			<thead>
+				<tr>
+					<!--					<th>ID</th>-->
+					<th>Tipo</th>
+					<th>Acciones</th>
+				</tr>
+			</thead>
+
+
+			<tbody>
+				<!--				No se puede usar lt ya que es un operador itnerno -->
+				<tr th:each="elem : ${listaTipos}">
+					<!--					<td th:text="${elem.id}"></td>-->
+					<td th:text="${elem.nombre}"></td>
+					<td>
+						<!--						MODIFICAR						-->
+						<a th:href="@{/ModificarTipo(id=${elem.id})}">
+							Modificar
+						</a>
+
+						<!--						ELIMINAR						-->
+						<a th:if="${esAdmin}" th:href="@{/EliminarTipo(id=${elem.id})}"
+							onclick="return confirm('¿Seguro que quieres eliminar este tipo?')">
+							Eliminar
+						</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+	</main>
+
+	<footer th:include="plantillas/plantillas.html::pie"></footer>
+</body>
+
+</html>

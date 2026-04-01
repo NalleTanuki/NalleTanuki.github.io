@@ -1,0 +1,51 @@
+<header th:fragment="cabecera">
+	<div id="cabecera_izq">
+		<img src="imagenes/logo.png" height="96px" width="96px">
+	</div>
+
+	<div id="cabecera_cen">
+		<h1>Caster</h1>
+		<h2>Tu concesionario de confianza</h2>
+	</div>
+
+	<div id="cabecera_der">
+		<img src="imagenes/facebook.png" height="48px" width="48px">
+		<img src="imagenes/instagram.png" height="48px" width="48px">
+	</div>
+</header>
+
+
+<nav th:fragment="menu">
+	<ul>
+		<div class="menu-izq">
+			<li>
+				<a th:href="@{/MenuVehiculos}">Vehículos</a>
+			</li>
+			<li>
+				<a th:href="@{/MenuMarcas}">Marcas</a>
+			</li>
+			<li>
+				<a th:href="@{/MenuTipos}">Tipos</a>
+			</li>
+			<li>
+				<a th:href="@{/MenuUsuarios}">Administración</a>
+			</li>
+			<li>
+				<a th:if="${session.ROLE == 'ADMIN'}" th:href="@{/MenuBackup}">Backup</a>
+			</li>
+		</div>
+
+		<div class="menu-der">
+			<li>
+				<a th:href="@{/logout}" class="logout-btn" onclick="return confirm('¿Seguro que quieres cerrar sesión?')">Cerrar sesión</a>
+			</li>
+		</div>
+	</ul>
+</nav>
+
+<footer th:fragment="pie">
+	el pie de la pagina
+
+	<a href="">hola</a>
+	<a href="">adios</a>
+</footer>

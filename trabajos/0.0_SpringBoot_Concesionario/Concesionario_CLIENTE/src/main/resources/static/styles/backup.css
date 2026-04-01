@@ -1,0 +1,48 @@
+/* CONTENEDOR PRINCIPAL */
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 70vh;
+}
+
+/* TARJETA ADMIN */
+main section {
+	background: white;
+	padding: 40px 50px;
+	border-radius: 12px;
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+	text-align: center;
+	max-width: 400px;
+	width: 100%;
+}
+
+/* TITULO */
+main h2 {
+	margin-bottom: 25px;
+	font-size: 26px;
+	color: #333;
+}
+
+/* BTN BACKUP */
+button {
+	background: #2e7d32;
+	color: white;
+	border: none;
+	padding: 12px 22px;
+	font-size: 16px;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+/* HOVER */
+button:hover {
+	background: #1b5e20;
+	transform: translateY(-2px);
+}
+
+/* EFECTO CLICK */
+button:active {
+	transform: scale(0.97);
+}
