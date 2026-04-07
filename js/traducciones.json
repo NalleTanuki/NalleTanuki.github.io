@@ -48,7 +48,7 @@
     "proyecto1Texto": "REST API developed with Spring Boot featuring authentication and authorization using JWT and session management, including access control, data validation, custom error handling and database persistence. Built following layered architecture and best development practices.",
 
     "proyecto2Titulo": "📚 Gamiko – Educational Platform for Secondary School Students",
-    "proyecto2Texto": "Web application designed for students and teachers in secondary education, allowing task management, study time tracking and interactive quizzes. Includes user authentication system, form validation and file management (upload and download)."
+    "proyecto2Texto": "Web application designed for students and teachers in secondary education, allowing task management, study time tracking and interactive quizzes. Includes user authentication system, form validation and file management (upload and download).",
 
     "proyecto3Titulo": "🛒 Online Store",
     "proyecto3Texto": "Web application with user authentication system, user management and shopping cart functionality, connected to a database for product and order persistence.",
