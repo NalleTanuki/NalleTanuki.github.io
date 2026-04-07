@@ -419,7 +419,7 @@ body.modo-claro footer {
   transform: scale(0.92);
 }
 
-btnArriba svg{
+#btnArriba svg{
   width: 22px;
   height: 22px;
   stroke: currentColor;
@@ -428,6 +428,15 @@ btnArriba svg{
 body.modo-claro #btnArriba{
   background: rgba(255, 255, 255, 0.8);
   color: #1c1c1e;
+}
+
+.badge{
+  font-size: 0.7rem;
+  color: var(--resaltado);
+  border: 1px solid var(--resaltado);
+  padding: 2px 6px;
+  border-radius: 6px;
+  margin-left: 6px;
 }
 
 

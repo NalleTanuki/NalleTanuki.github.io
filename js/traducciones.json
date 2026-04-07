@@ -17,10 +17,10 @@
     "tituloProyectos": "Proyectos destacados",
 
     "proyecto1Titulo": "🚗 API REST - Gestión de vehículos",
-    "proyecto1Texto": "API REST desarrollada con Spring Boot con autenticación y autorización mediante JWT y gestión de sesiones, incluyendo control de acceso, validación de datos, manejo de errores personalizados y persistencia en base de datos. Implementada siguiendo arquitectura por capas y buenas prácticas de desarrollo.",
+    "proyecto1Texto": "API REST desarrollada con Spring Boot que incluye autenticación JWT, control de acceso por roles, validación de datos y manejo de errores personalizados.",
 
     "proyecto2Titulo": "📚 Gamiko - Aplicación para Alumnos de la ESO",
-    "proyecto2Texto": "Aplicación web orientada a alumnos y profesores de la ESO que permite gestionar tareas, controlar el tiempo de estudio y realizar test interactivos. Incluye sistema de autenticación de usuarios, validación de formularios y gestión de archivos (subida y descarga).",
+    "proyecto2Texto": "Aplicación web educativa con autenticación de usuarios que permite gestionar tareas, seguimiento del estudio y realización de test interactivos.",
 
     "proyecto3Titulo": "🛒 Tienda Online",
     "proyecto3Texto": "Aplicación web con sistema de autenticación, gestión de usuarios y carrito de compra, conectada a base de datos para persistencia de productos y pedidos.",
@@ -58,11 +58,11 @@
 
     "tituloProyectos": "Featured Projects",
 
-    "proyecto1Titulo": "🚗 REST API - Vehicle Management",
-    "proyecto1Texto": "REST API developed with Spring Boot featuring authentication and authorization using JWT and session management, including access control, data validation, custom error handling and database persistence. Built following layered architecture and best development practices.",
+    "proyecto1Titulo": "🚗 - Vehicle Management REST API",
+    "proyecto1Texto": "REST API built with Spring Boot featuring JWT authentication, role-based access, data validation and custom error handling.",
 
     "proyecto2Titulo": "📚 Gamiko – Educational Platform for Secondary School Students",
-    "proyecto2Texto": "Web application designed for students and teachers in secondary education, allowing task management, study time tracking and interactive quizzes. Includes user authentication system, form validation and file management (upload and download).",
+    "proyecto2Texto": "Educational web application with user authentication, enabling task management, study tracking and interactive quizzes.",
 
     "proyecto3Titulo": "🛒 Online Store",
     "proyecto3Texto": "Web application with user authentication system, user management and shopping cart functionality, connected to a database for product and order persistence.",
