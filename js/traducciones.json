@@ -28,7 +28,9 @@
     "proyecto5Texto": "Sistema de gestión de empleados con validación de formularios y persistencia en base de datos MySQL.",
 
     "tituloContacto": "¿Trabajamos junt@s?",
-    "textoContacto": "Puedes contactarme a través de mi <a href=\"https://www.linkedin.com/in/alexandravalledor/\" target=\"_blank\">LinkedIn</a> o ver más proyectos en <a href=\"https://github.com/NalleTanuki/NalleTanuki.github.io/tree/main/trabajos\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>."
+    "textoContacto": "Puedes contactarme a través de mi <a href=\"https://www.linkedin.com/in/alexandravalledor/\" target=\"_blank\">LinkedIn</a> o ver más proyectos en <a href=\"https://github.com/NalleTanuki/NalleTanuki.github.io/tree/main/trabajos\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>.",
+
+    "verCodigo": "Ver código"
   },
 
   "en": {
@@ -60,6 +62,8 @@
     "proyecto5Texto": "Employee management system with form validation and MySQL database persistence.",
 
     "tituloContacto": "Let's work together",
-    "textoContacto": "You can contact me via <a href=\"https://www.linkedin.com/in/alexandravalledor/\" target=\"_blank\">LinkedIn</a> or check my projects on <a href=\"https://github.com/NalleTanuki\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>."
+    "textoContacto": "You can contact me via <a href=\"https://www.linkedin.com/in/alexandravalledor/\" target=\"_blank\">LinkedIn</a> or check my projects on <a href=\"https://github.com/NalleTanuki\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>.",
+
+    "verCodigo": "View Repository"
  }
 }
