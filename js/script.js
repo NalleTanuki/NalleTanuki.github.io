@@ -51,8 +51,17 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!t) return;
 
     for (let key in t) {
+
+      // Buscar x ID
       const el = document.getElementById(key);
       if (el) el.innerHTML = t[key];
+
+      // Buscar x CLASE
+      const elements = document.querySelectorAll(`.${key}`);
+
+      elements.forEach(el => {
+        el.innerHTML = t[key];
+      });
     }
 
     localStorage.setItem('idioma', lang);
@@ -83,5 +92,5 @@ document.addEventListener('DOMContentLoaded', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
-
+  
 });
