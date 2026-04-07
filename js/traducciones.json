@@ -34,7 +34,11 @@
     "tituloContacto": "¿Trabajamos junt@s?",
     "textoContacto": "Puedes contactarme a través de mi <a href=\"https://www.linkedin.com/in/alexandravalledor/\" target=\"_blank\">LinkedIn</a> o ver más proyectos en <a href=\"https://github.com/NalleTanuki/NalleTanuki.github.io/tree/main/trabajos\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>.",
 
-    "verCodigo": "Ver código"
+    "verCodigo": "Ver código",
+
+    "techAuth": "Autenticación",
+
+    "techVal": "Validación"
   },
 
   "en": {
@@ -72,6 +76,10 @@
     "tituloContacto": "Let's work together",
     "textoContacto": "You can contact me via <a href=\"https://www.linkedin.com/in/alexandravalledor/\" target=\"_blank\">LinkedIn</a> or check my projects on <a href=\"https://github.com/NalleTanuki\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>.",
 
-    "verCodigo": "View Repository"
+    "verCodigo": "View Repository",
+
+    "techAuth": "Authentication",
+
+    "techVal": "Validation"
  }
 }
