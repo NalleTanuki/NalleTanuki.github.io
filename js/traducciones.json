@@ -7,9 +7,13 @@
     "menuProyectos": "/proyectos",
     "menuContacto": "/contacto",
 
-     "tituloSobreMi": "Sobre mí",
-    "textoSobreMi": "Desarrolladora backend con Java y Spring Boot, enfocada en la creación de APIs REST seguras y escalables. He desarrollado APIs REST completas con autenticación mediante JWT, gestión de usuarios y conexión a bases de datos relacionales. Me enfoco en crear aplicaciones funcionales, bien estructuradas y seguras, aplicando buenas prácticas de desarrollo. También tengo experiencia en frontend (HTML, CSS y JavaScript), lo que me permite desarrollar aplicaciones completas y entender todo el flujo de una aplicación web. Actualmente sigo formándome en arquitectura backend y mejores prácticas en desarrollo de software.",
-    
+    "tituloSobreMi": "Sobre mí",
+
+    "textoSobreMi1": "Desarrolladora backend con Java y Spring Boot, enfocada en la creación de APIs REST seguras y escalables. He desarrollado APIs REST completas con autenticación mediante JWT, gestión de usuarios y conexión a bases de datos relacionales. Actualmente sigo formándome en arquitectura backend y mejores prácticas en desarrollo de software.",
+    "textoSobreMi2": "Me enfoco en crear aplicaciones funcionales, bien estructuradas y seguras, aplicando buenas prácticas de desarrollo.",
+    "textoSobreMi3": "También tengo experiencia en frontend (HTML, CSS y JavaScript), lo que me permite desarrollar aplicaciones completas y entender todo el flujo de una aplicación web.",
+    "textoSobreMi4": " Actualmente sigo formándome en arquitectura backend y mejores prácticas en desarrollo de software.",
+
     "tituloProyectos": "Proyectos destacados",
 
     "proyecto1Titulo": "🚗 API REST - Gestión de vehículos",
@@ -42,7 +46,11 @@
     "menuContacto": "/contact",
 
     "tituloSobreMi": "About Me",
-    "textoSobreMi": "Backend developer specialized in Java and Spring Boot, focused on building secure and scalable REST APIs. I have developed complete APIs with JWT authentication, user management and relational database integration. I focus on creating functional, well-structured and secure applications following best development practices. I also have frontend experience (HTML, CSS and JavaScript), which allows me to build fullstack applications and understand the complete workflow of a web application. I am currently continuing to improve my skills in backend architecture and software development best practices.",
+
+    "textoSobreMi1": "Backend developer specialized in Java and Spring Boot, focused on building secure and scalable REST APIs. I have developed complete APIs with JWT authentication, user management and relational database integration.",
+    "textoSobreMi2": "I focus on creating functional, well-structured and secure applications following best development practices.",
+    "textoSobreMi3": "I also have frontend experience (HTML, CSS and JavaScript), which allows me to build fullstack applications and understand the complete workflow of a web application.",
+    "textoSobreMi4": "I am currently continuing to improve my skills in backend architecture and software development best practices.",
 
     "tituloProyectos": "Featured Projects",
 
