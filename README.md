@@ -1,4 +1,5 @@
 # Alexandra Valledor - Web Developer Portfolio
+## Backend Developer | Java & Spring Boot
 
 Welcome to my web development portfolio. This repository contains a collection of projects focused on backend development with Java & Spring Boot, along with fullstack web applications.
 
