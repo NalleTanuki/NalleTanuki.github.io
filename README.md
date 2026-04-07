@@ -25,19 +25,19 @@ I also have frontend knowledge (HTML, CSS, JavaScript), allowing me to develop c
 
 ## 🌐 Live Demo
 
-You can view the portfolio online here:
+You can view the portfolio online here: 
 👉 https://nalletanuki.github.io
 
 
 ## 📌 Featured Projects
 
-- 🚗 Vehicle Management API (Spring Boot)
+- 🚗 **Vehicle Management API (Spring Boot)**  
     REST API with JWT authentication, role-based access, validation and error handling.
 
-- 📚 Gamiko – Educational Platform
+- 📚 **Gamiko – Educational Platform**  
     Web application for students and teachers with task management, quizzes and file handling.
 
-- 🛒 Online Store
+- 🛒 **Online Store**  
     Fullstack PHP application with authentication and shopping cart system.
 
 
@@ -48,6 +48,6 @@ This repository is continuoysly updated with new features and improvements as I 
 ## 📇 Autor & Contact
 
 **Alexandra**  
-[LinkedIn] https://www.linkedin.com/in/alexandravalledor
-[GitHub]https://github.com/NalleTanuki
+[LinkedIn](https://www.linkedin.com/in/alexandravalledor)
+[GitHub](https://github.com/NalleTanuki)
 
