@@ -32,6 +32,12 @@ html {
   margin: 0 auto;
 }
 
+.sobre-mi .container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 body.modo-claro {
   --fondo: #fdfdfd;
   --texto: #1c1c1e;
@@ -204,6 +210,7 @@ section {
 /* ===== SOBRE MI ===== */
 .sobre-mi {
   text-align: center;
+  padding-top: 100px;
 }
 
 .sobre-mi h2 {
@@ -214,11 +221,17 @@ section {
 
 .sobre-mi p{
   max-width: 700px;
-  margin: 0 auto 1.2rem;
-  line-height: 1.7;
+  margin: 0 auto;
+  margin-bottom: 1.8rem;
+  line-height: 1.8;
   font-size: 1rem;
   color: var(--gris);
   text-align: left;
+}
+
+.sobre-mi p:first-of-type{
+  font-size: 1.05rem;
+  color: var(--texto);
 }
 
 /* ===== PROYECTOS ===== */
