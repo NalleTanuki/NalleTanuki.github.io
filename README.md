@@ -1,33 +1,53 @@
-# Portafolio de Desarrollo Web
+# Alexandra Valledor - Web Developer Portfolio
 
-Bienvenido/a a mi repositorio de prácticas y proyectos web. Aquí encontrarás diferentes trabajos realizados durante mi aprendizaje de Desarrollo de Aplicaciones Web, incluyendo HTML, CSS, JavaScript y otras tecnologías.
+Welcome to my web development portfolio. This repository contains a collection of projects focused on backend development with Java & Spring Boot, along with fullstack web applications.
 
-## 📁 Estructura del repositorio
+## 🚀 About Me
+I am a backend-focused web developer specialized in Java and Spring Boot, with experience building secure and scalable REST APIs.
+I also have frontend knowledge (HTML, CSS, JavaScript), allowing me to develop complete web applications.
 
-- `index.html`: Página principal del portafolio.
-- `style.css`: Hoja de estilos general.
-- `trabajos/`: Carpeta que contiene los diferentes ejercicios o proyectos realizados.
 
-## 🛠️ Tecnologías utilizadas
+## 📁 Project Structure
 
-- HTML5
-- CSS3
-- JavaScript
+- `index.html`: Main portfolio page.
+- `css/`: Stylesheets.
+- `js/`: Scrits (including language system and UI logic).
+- `trabajos/`: Collection of projects and exercises.
 
-## 🚀 Cómo ver el portafolio
 
-Puedes abrir directamente el archivo `index.html` en tu navegador para ver la página principal del portafolio.
+## 🛠️ Technologies
 
-El repositorio está publicado con GitHub Pages, también puedes verlo en línea:
-👉 NalleTanuki.github.io
+- Java · Spring Boot
+- REST APIs · JWT Authentication
+- PHP · MySQL
+- HTML5 · CSS3 · JavaScript
 
-## 📌 Notas
 
-- Este repositorio está en constante actualización con nuevos ejercicios y mejoras.
-- Algunos trabajos dentro de la carpeta `trabajos/` son prácticas individuales con sus propios archivos HTML, CSS, JS, PHP y otras tecnologías.
+## 🌐 Live Demo
 
-## 📇 Autor
+You can view the portfolio online here:
+👉 https://nalletanuki.github.io
+
+
+## 📌 Featured Projects
+
+- 🚗 Vehicle Management API (Spring Boot)
+    REST API with JWT authentication, role-based access, validation and error handling.
+
+- 📚 Gamiko – Educational Platform
+    Web application for students and teachers with task management, quizzes and file handling.
+
+- 🛒 Online Store
+    Fullstack PHP application with authentication and shopping cart system.
+
+
+## 📈 Status
+This repository is continuoysly updated with new features and improvements as I keep learning and building new projects.
+
+
+## 📇 Autor & Contact
 
 **Alexandra**  
-[GitHub](https://github.com/NalleTanuki)
+[LinkedIn] https://www.linkedin.com/in/alexandravalledor
+[GitHub]https://github.com/NalleTanuki
 
